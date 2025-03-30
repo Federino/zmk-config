@@ -20,4 +20,13 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: tester_xiao
+    shield: apiaster_left rgbled_adapter
+    snippet: studio-rpc-usb-uart 
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: apiaster-left-xiao-ble-studio
+  - board: seeeduino_xiao_ble
+    shield: apiaster_right rgbled_adapter
+    artifact-name: apiaster-right-xiao-ble
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    artifact-name: xiao-ble-reset
