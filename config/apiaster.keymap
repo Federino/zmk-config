@@ -5,6 +5,7 @@
 #define BASE        0
 #define MOVEMENT    1
 #define SYMBOLS     2
+#define NUMBERS     3
 //#define COLEMAK     1
 //#define LOWER       2
 //#define RAISE       3
@@ -72,11 +73,11 @@
 // |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
 //                                   | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
             bindings = <
-          &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                      &kp N6    &kp N7           &kp N8      &kp N9     &kp N0
-          &kp Q      &kp W      &kp E            &kp R             &kp T                       &kp Y     &kp U            &kp I       &kp O      &kp P
-&kp TAB   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                       &kp H     &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
-    &kp BSLH  &kp Z      &kp X      &kp C            &kp V             &kp B                       &kp N     &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
-                                        &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt LOWER TAB               &kp DEL   &lt SYMBOLS BSPC &lt RAISE
+          &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
+          &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I       &kp O      &kp P
+&kp TAB   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
+&kp BSLH  &kp Z      &kp X      &kp C            &kp V             &kp B                 &kp N               &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
+                                &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
                     >;
                 };
 
