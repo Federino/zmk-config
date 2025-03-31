@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE        0
-//#define MOVEMENT    1
+#define MOVEMENT    1
 //#define SYMBOLS     2
 //#define NUMBERS     3
 //#define COLEMAK     1
@@ -78,27 +78,27 @@
 &kp TAB   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
 &kp BSLH  &kp Z      &kp X      &kp C            &kp V             &kp B                 &kp N               &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
                                 //&lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
-                                &kp ESC &kp SPACE &kp TAB       &kp ENTER   &kp BSPC &kp DEL
+                                &lt MOVEMENT ESC &kp SPACE &kp TAB       &kp ENTER   &kp BSPC &kp DEL
                     >;
                 };
-//
-//                movement_layer {
-//                    display-name = "Movement";
-//        // ------------------------------------------------------------------------------------------------------------
-//        //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//        //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-//        // | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-//        // |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-//        //                                   |             |        |      |  |      |       |      |
-//                    bindings = <
-//                &none      &none    &none     &none      &none                      &kp PAGE_DOWN   &kp HOME        &none         &kp END          &kp PAGE_UP 
-//                &none      &none    &none     &none      &none                      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none 
-//        &kp TAB &kp LGUI   &kp LALT &kp LCTRL &kp LSHFT  &none                      &none           &none           &none         &none            &none       &none 
-//        &none   &kp N6     &kp Q    &kp W     &kp E      &kp R                      &none           &none           &none         &none            &none       &none
-//                                    &none     &none      &none                      &kp ENTER       &kp BACK        &kp DEL
-//                    >;
-//                };
-//
+
+                movement_layer {
+                    display-name = "Movement";
+        // ------------------------------------------------------------------------------------------------------------
+        //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
+        //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
+        // | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
+        // |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
+        //                                   |             |        |      |  |      |       |      |
+                    bindings = <
+                &none      &none    &none     &none      &none                      &kp PAGE_DOWN   &kp HOME        &none         &kp END          &kp PAGE_UP 
+                &none      &none    &none     &none      &none                      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none 
+        &kp TAB &kp LGUI   &kp LALT &kp LCTRL &kp LSHFT  &none                      &none           &none           &none         &none            &none       &none 
+        &none   &kp N6     &kp Q    &kp W     &kp E      &kp R                      &none           &none           &none         &none            &none       &none
+                                    &none     &none      &none                      &kp ENTER       &kp BACK        &kp DEL
+                    >;
+                };
+
 //                symbols_layer {
 //                    display-name = "symbols";
 //        // ------------------------------------------------------------------------------------------------------------
