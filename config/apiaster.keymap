@@ -111,7 +111,7 @@
           &none      &none      &none            &none             &none                 &kp PAGE_DOWN       &kp HOME         &none         &kp END          &kp PAGE_UP 
 &kp TAB   &kp LGUI   &kp LALT   &kp LCTRL        &kp LSHFT         &none                 &kp LEFT_ARROW      &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none
 &kp BSLH  &none      &none      &none            &none             &none                 &none               &none            &none         &none            &none         &kp SQT
-                                &none            &none             &none                 &none               &none            &none
+                                &none            &none             &none                 &kp ENTER           &kp BSPC         &kp DEL
 
                     >;
         };
