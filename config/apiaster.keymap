@@ -18,6 +18,11 @@
 #define THUMBS_L 44 45 46
 #define THUMBS_R 47 48 49
 
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {    
     //macros {
     //    wasdt: wasd_type {
@@ -69,9 +74,6 @@
             display-name = "Layer-Tap";
         };
 
-        &caps_word {
-            continue-list = <UNDERSCORE MINUS>;
-        };
     };
 
 
