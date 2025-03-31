@@ -4,8 +4,8 @@
 
 #define BASE        0
 #define MOVEMENT    1
-//#define SYMBOLS     2
-//#define NUMBERS     3
+#define SYMBOLS     2
+#define NUMBERS     3
 //#define COLEMAK     1
 //#define LOWER       2
 //#define RAISE       3
@@ -59,6 +59,15 @@
             tapping-term-ms = <200>;
             bindings = <&sys_reset>, <&bootloader>;
         };
+
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
     };
 
     keymap {
@@ -77,80 +86,62 @@
           &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I       &kp O      &kp P
 &kp TAB   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
 &kp BSLH  &kp Z      &kp X      &kp C            &kp V             &kp B                 &kp N               &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
-                                //&lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
-                                &lt MOVEMENT ESC &kp SPACE &kp TAB       &kp ENTER   &kp BSPC &kp DEL
+                                &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+
                     >;
                 };
 
-        test_layer {
-            display-name = "testtttt";
+        movement_layer {
+            display-name = "Movement";
 // ------------------------------------------------------------------------------------------------------------
-//         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
-//         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
-// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
-// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
-//                                   | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
+//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
+//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
+// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
+// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
+//                                   |             |        |      |  |      |       |      |
             bindings = <
-          &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
-          &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I       &kp O      &kp P
-&kp TAB   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
-&kp BSLH  &kp Z      &kp X      &kp C            &kp V             &kp B                 &kp N               &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
-                                //&lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
-                                &kp ESC &kp SPACE &kp TAB       &kp ENTER   &kp BSPC &kp DEL
-                    >;
-                };
+        &none      &none    &none     &none      &none                      &kp PAGE_DOWN   &kp HOME        &none         &kp END          &kp PAGE_UP 
+        &none      &none    &none     &none      &none                      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none 
+&kp TAB &kp LGUI   &kp LALT &kp LCTRL &kp LSHFT  &none                      &none           &none           &none         &none            &none       &none 
+&none   &kp N6     &kp Q    &kp W     &kp E      &kp R                      &none           &none           &none         &none            &none       &none
+                            &none     &none      &none                      &kp ENTER       &kp BACK        &kp DEL
+            >;
+        };
 
-//        movement_layer {
-//            display-name = "Movement";
-//// ------------------------------------------------------------------------------------------------------------
-////         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-////         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-//// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-//// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-////                                   |             |        |      |  |      |       |      |
-//            bindings = <
-//        &none      &none    &none     &none      &none                      &kp PAGE_DOWN   &kp HOME        &none         &kp END          &kp PAGE_UP 
-//        &none      &none    &none     &none      &none                      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none 
-//&kp TAB &kp LGUI   &kp LALT &kp LCTRL &kp LSHFT  &none                      &none           &none           &none         &none            &none       &none 
-//&none   &kp N6     &kp Q    &kp W     &kp E      &kp R                      &none           &none           &none         &none            &none       &none
-//                            &none     &none      &none                      &kp ENTER       &kp BACK        &kp DEL
-//            >;
-//        };
+        symbols_layer {
+            display-name = "symbols";
+        // ------------------------------------------------------------------------------------------------------------
+        //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
+        //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
+// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
+// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
+//                                   |             |        |      |  |      |       |      |
+            bindings = <
+          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6            &kp N7        &kp N8                &kp N9            &kp N0 
+          &kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp BACKSLASH              &kp LS(BACKSLASH) &kp PLUS      &kp STAR              &kp RA(N3)        &kp RA(N2) 
+&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)     &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none 
+&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)        &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none
+                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none             &kp LS(COMMA) &none
+                                       
+            >;
+        };
 
-//                symbols_layer {
-//                    display-name = "symbols";
-//        // ------------------------------------------------------------------------------------------------------------
-//        //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//        //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-//// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-//// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-////                                   |             |        |      |  |      |       |      |
-//            bindings = <
-//          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6            &kp N7        &kp N8                &kp N9            &kp N0 
-//          &kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp BACKSLASH              &kp LS(BACKSLASH) &kp PLUS      &kp STAR              &kp RA(N3)        &kp RA(N2) 
-//&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)     &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none 
-//&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)        &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none
-//                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none             &kp LS(COMMA) &none
-//                                       
-//            >;
-//        };
-//
-//        numbers_layer {
-//            display-name = "numbers";
-//// ------------------------------------------------------------------------------------------------------------
-////         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-////         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-//// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-//// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-////                                   |             |        |      |  |      |       |      |
-//            bindings = <
-//          &none     &kp F10    &kp F11 &kp F12 &none       &none         &none    &none             &none     &none 
-//          &none     &kp F7     &kp F8  &kp F9  &none       &kp STAR      &kp N7   &kp N8            &kp N9    &kp MINUS
-//&none     &none     &kp F4     &kp F5  &kp F6  &none       &kp SLASH     &kp N4   &kp N5            &kp N6    &kp PLUS         &none 
-//&none     &none     &kp F1     &kp F2  &kp F3  &none       &kp PERIOD    &kp N1   &kp N2            &kp N3    &kp LEFT_BRACKET &none
-//                               &none   &none   &none       &kp BACKSLASH &kp N0   &kp LS(BACKSLASH)
-//            >;
-//        };
+        numbers_layer {
+            display-name = "numbers";
+// ------------------------------------------------------------------------------------------------------------
+//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
+//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
+// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
+// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
+//                                   |             |        |      |  |      |       |      |
+            bindings = <
+          &none     &kp F10    &kp F11 &kp F12 &none       &none         &none    &none             &none     &none 
+          &none     &kp F7     &kp F8  &kp F9  &none       &kp STAR      &kp N7   &kp N8            &kp N9    &kp MINUS
+&none     &none     &kp F4     &kp F5  &kp F6  &none       &kp SLASH     &kp N4   &kp N5            &kp N6    &kp PLUS         &none 
+&none     &none     &kp F1     &kp F2  &kp F3  &none       &kp PERIOD    &kp N1   &kp N2            &kp N3    &kp LEFT_BRACKET &none
+                               &none   &none   &none       &kp BACKSLASH &kp N0   &kp LS(BACKSLASH)
+            >;
+        };
 
  //               graphite_layer {
  //                   display-name = "graphite";
