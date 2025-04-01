@@ -71,7 +71,7 @@
             key-positions = <1 9>;
             layers        = <0>;
             bindings      = <&change_language>;
-        }
+        };
 
     };
 
