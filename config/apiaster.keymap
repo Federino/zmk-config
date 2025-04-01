@@ -31,39 +31,47 @@
 };
 
 / {    
-    //macros {
-    //    wasdt: wasd_type {
-    //        compatible = "zmk,behavior-macro";
-    //        #binding-cells = <0>;
-    //        bindings
-    //            = <&macro_tap &tog WASD &tog WASD_TYPE>;
-    //    };
-    //};
+    macros {
+        change_language: change_language {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>,
+                       <&macro_press &kp SPACE>,
+                       <&macro_release &kp LGUI>,
+                       <&macro_release &kp SPACE>;
+        };
+    };
     
     combos {
         compatible = "zmk,combos";
         combo_caps_words {
-            timeout-ms = <50>;
+            timeout-ms    = <50>;
             key-positions = <27 28 29>;
-            layers = <0>;
-            bindings = <&caps_word>;
+            layers        = <0>;
+            bindings      = <&caps_word>;
         };
 
         hands_down_as_base {
-            timeout-ms = <50>;
+            timeout-ms    = <50>;
             key-positions = <12 40>;
-            layers = <BASE>;
-            bindings = <&tog_off BASE>,
-                       <&tog_on HANDS_DOWN>;
+            layers        = <BASE HANDS_DOWN>;
+            bindings      = <&tog HANDS_DOWN>;
+                       
         };
 
-        querty_as_base {
-            timeout-ms = <50>;
-            key-positions = <35 17>;
-            layers = <HANDS_DOWN>;
-            bindings = <&tog_off HANDS_DOWN>,
-                       <&tog_on BASE>;
-        };
+        //querty_as_base {
+        //    timeout-ms    = <50>;
+        //    key-positions = <35 17>;
+        //    layers        = <HANDS_DOWN>;
+        //    bindings      = <&tog BASE>;
+        //};
+
+        change_language {
+            timeout-ms    = <50>;
+            key-positions = <1 9>;
+            layers        = <0>;
+            bindings      = <&change_language>;
+        }
 
     };
 
@@ -112,14 +120,14 @@
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle layer ON";
-            toggle-mode = "on";
+            //toggle-mode = "on";
         };
 
         tog_off: toggle_layer_off_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             display-name = "Toggle layer OFF";
-            toggle-mode = "off";
+            //toggle-mode = "off";
         };
 
     };
