@@ -35,10 +35,8 @@
         change_language: change_language {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>,
-                       <&macro_press &kp SPACE>,
-                       <&macro_release &kp LGUI>,
-                       <&macro_release &kp SPACE>;
+            bindings = <&macro_press   &kp LGUI &kp SPACE>,
+                       <&macro_release &kp LGUI &kp SPACE>;
         };
     };
     
@@ -59,7 +57,7 @@
                        
         };
 
-        //querty_as_base {
+        //querty_as_base {  
         //    timeout-ms    = <50>;
         //    key-positions = <35 17>;
         //    layers        = <HANDS_DOWN>;
