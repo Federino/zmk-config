@@ -255,7 +255,7 @@
 // |       |      |       |     |      |  B   |  
 //                              |      |      |        |    
             bindings = <
-          &trans     &trans   &trans   &kp Y    &kp H                  &trans    &trans  &trans  &trans  &trans  
+          &trans     &kp U    &trans   &kp Y    &kp H                  &trans    &trans  &trans  &trans  &trans  
           &trans     &trans   &trans   &trans   &kp T                  &trans    &trans  &trans  &trans  &trans  
 &kp LALT  &trans     &trans   &trans   &trans   &kp G                  &trans    &trans  &trans  &trans  &trans   &trans  
 &trans    &trans     &trans   &trans   &trans   &kp B                  &trans    &trans  &trans  &trans  &trans   &trans  
