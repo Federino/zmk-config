@@ -256,8 +256,8 @@
 //                              |      |      |        |    
             bindings = <
           &trans     &kp U    &trans   &kp Y    &kp H                  &trans    &trans  &trans  &trans  &trans  
-          &trans     &trans   &trans   &trans   &kp T                  &trans    &trans  &trans  &trans  &trans  
-&kp LALT  &trans     &trans   &trans   &trans   &kp G                  &trans    &trans  &trans  &trans  &trans   &trans  
+          &kp ESC    &trans   &trans   &trans   &kp T                  &trans    &trans  &trans  &trans  &trans  
+&kp LALT  &kp TAB    &trans   &trans   &trans   &kp G                  &trans    &trans  &trans  &trans  &trans   &trans  
 &trans    &trans     &trans   &trans   &trans   &kp B                  &trans    &trans  &trans  &trans  &trans   &trans  
                               &trans   &trans   &trans                 &trans    &trans  &trans
             >;
