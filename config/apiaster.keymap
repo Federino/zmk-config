@@ -75,28 +75,28 @@
             key-positions = <16 17>;
             layers        = <0>;
             bindings      = <&kp LS(COMMA)>;
-        }
+        };
 
         c_dos_puntos {
             timeout-ms    = <50>;
             key-positions = <17 18>;
             layers        = <0>;
             bindings      = <&kp LS(DOT)>;
-        }
+        };
 
         c_barra_baja {
             timeout-ms    = <50>;
             key-positions = <18 19>;
             layers        = <0>;
             bindings      = <&kp LS(FSLH)>;
-        }
+        };
 
         c_igual {
             timeout-ms    = <50>;
             key-positions = <39 40>;
             layers        = <0>;
             bindings      = <&kp LS(N0)>;
-        }
+        };
     };
 
     behaviors {
