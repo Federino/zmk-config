@@ -70,6 +70,33 @@
             bindings      = <&change_language>;
         };
 
+        c_punto_coma {
+            timeout-ms    = <50>;
+            key-positions = <16 17>;
+            layers        = <0>;
+            bindings      = <&kp LS(COMMA)>;
+        }
+
+        c_dos_puntos {
+            timeout-ms    = <50>;
+            key-positions = <17 18>;
+            layers        = <0>;
+            bindings      = <&kp LS(DOT)>;
+        }
+
+        c_barra_baja {
+            timeout-ms    = <50>;
+            key-positions = <18 19>;
+            layers        = <0>;
+            bindings      = <&kp LS(FSLH)>;
+        }
+
+        c_igual {
+            timeout-ms    = <50>;
+            key-positions = <39 40>;
+            layers        = <0>;
+            bindings      = <&kp LS(N0)>;
+        }
     };
 
     behaviors {
@@ -144,15 +171,33 @@
             bindings = <
             &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
             &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I       &kp O      &kp P
-&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHIFT F      &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
+&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp APOSTROPHE
 &caps_word  &kp Z      &kp X      &kp C            &kp V             &kp B                 &kp N               &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
 
-        hands_down_layer {
-            display-name = "hands down neu";
+//        hands_down_layer {
+//            display-name = "hands down neu";
+//// ------------------------------------------------------------------------------------------------------------
+////         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
+////         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
+//// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
+//// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
+////                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
+//            bindings = <
+//            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
+//            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
+//&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr RALT I &hr RGUI H    &kp J
+//&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &kp Y      &kp K         &kp Z
+//                                &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+//
+//                    >;
+//                };
+
+        colemak_dh_layer {
+            display-name = "colemak dh";
 // ------------------------------------------------------------------------------------------------------------
 //         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
 //         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
@@ -161,9 +206,9 @@
 //                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
             bindings = <
             &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
-            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
-&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr RALT I &hr RGUI H    &kp J
-&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &kp Y      &kp K         &kp Z
+            &kp Q      &kp W      &kp F            &kp P             &kp B                 &kp J               &kp L            &kp U       &kp Y      &kp SEMI
+&kp TAB     &hl LGUI A &hl LALT R &hl LCTRL S      &hl LSHIFT T      &kp G                 &kp M               &hr RSHFT N      &hr RCTRL E &hr RALT I &hr RGUI O    &kp APOSTROPHE
+&caps_word  &kp Z      &kp X      &kp C            &kp D             &kp V                 &kp K               &kp H            &kp COMMA   &kp DOT    &kp FSLH      &kp Z
                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
