@@ -309,7 +309,7 @@
           &kp I      &kp Q    &kp W    &kp E          &kp R                             &none  &none  &none  &none  &none 
 &kp TAB   &kp LSHFT  &kp A    &kp S    &kp D          &kp F                             &none  &none  &none  &none  &none &none 
 &kp ESC   &kp LCTRL  &kp Z    &kp X    &kp C          &kp V                             &none  &none  &none  &none  &none &none 
-                              &kp LALT &kp SPACE      &mo EXTRA_WASD                    &none  &none  &none 
+                              &kp LALT &kp EXTRA_WASD &mo SPACE                    &none  &none  &none 
             >;
         };
 
@@ -322,10 +322,10 @@
 // |       |      |       |     |      |  B   |  
 //                              |      |      |        |    
             bindings = <
-          &trans     &kp U    &trans   &kp Y    &kp H                  &trans    &trans  &trans  &trans  &trans  
-          &kp ESC    &trans   &trans   &kp I    &kp T                  &trans    &trans  &trans  &trans  &trans  
-&kp LALT  &kp TAB    &trans   &trans   &trans   &kp G                  &trans    &trans  &trans  &trans  &trans   &trans  
-&trans    &trans     &trans   &trans   &kp M    &kp B                  &trans    &trans  &trans  &trans  &trans   &trans  
+          &kp U      &kp M    &kp N    &kp Y    &kp H                  &trans    &trans  &trans  &trans  &trans  
+          &kp ESC    &kp O    &kp L    &kp I    &kp T                  &trans    &trans  &trans  &trans  &trans  
+&kp LALT  &kp TAB    &trans   &trans   &kp J    &kp G                  &trans    &trans  &trans  &trans  &trans   &trans  
+&trans    &trans     &trans   &kp N    &kp M    &kp B                  &trans    &trans  &trans  &trans  &trans   &trans  
                               &trans   &trans   &trans                 &trans    &trans  &trans
             >;
         };
