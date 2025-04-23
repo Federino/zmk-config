@@ -45,6 +45,33 @@
                        <&macro_press   &kp LS(NON_US_BACKSLASH) >,
 		       <&macro_release &kp LS(NON_US_BACKSLASH) >;
         };
+	
+        m_copiar: m_copiar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp LCTRL >,
+                       <&macro_press   &kp C >,
+                       <&macro_release &kp LCTRL >,
+		       <&macro_release &kp C >;
+        };
+	
+        m_cortar: m_cortar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp LCTRL >,
+                       <&macro_press   &kp X >,
+                       <&macro_release &kp LCTRL >,
+		       <&macro_release &kp X >;
+        };
+
+        m_pegar: m_pegar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp LCTRL >,
+                       <&macro_press   &kp P >,
+                       <&macro_release &kp LCTRL >,
+		       <&macro_release &kp P >;
+        };
     };
     
     combos {
@@ -253,7 +280,7 @@
 //            >;
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8        &kp N9           &kp N0
-          &none      &none      &none            &none             &none                 &kp PAGE_DOWN       &kp HOME         &none         &kp END          &kp PAGE_UP 
+          &none      &none      &m_pegar         &m_copiar         &m_cortar             &kp PAGE_DOWN       &kp HOME         &none         &kp END          &kp PAGE_UP 
 &kp TAB   &kp LGUI   &kp LALT   &kp LCTRL        &kp LSHFT         &none                 &kp LEFT_ARROW      &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none
 &kp BSLH  &none      &none      &none            &none             &none                 &none               &none            &none         &none            &none         &kp SQT
                                 &none            &none             &none                 &kp ENTER           &kp BSPC         &kp DEL
