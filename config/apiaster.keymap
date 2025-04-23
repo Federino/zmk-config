@@ -72,6 +72,15 @@
                        <&macro_release &kp LCTRL >,
 		       <&macro_release &kp V >;
         };
+
+        m_deshacer: m_deshacer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp LCTRL >,
+                       <&macro_press   &kp Z >,
+                       <&macro_release &kp LCTRL >,
+		       <&macro_release &kp Z >;
+        };
     };
     
     combos {
