@@ -24,9 +24,9 @@
 #define THUMBS_R 47 48 49
 
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
+//&caps_word {
+//    continue-list = <UNDERSCORE MINUS>;
+//};
 
 / {    
     macros {
