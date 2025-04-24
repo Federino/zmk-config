@@ -253,7 +253,7 @@
             //toggle-mode = "off";
         };
 
-	mt_que : mod_tap_que {
+	mt_que: mod_tap_que {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
