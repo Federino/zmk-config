@@ -91,7 +91,7 @@
 		       <&macro_release &kp U >;
                        <&macro_press   &kp E >,
 		       <&macro_release &kp E >;
-	}
+	};
     };
     
     combos {
