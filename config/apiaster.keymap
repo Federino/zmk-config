@@ -81,6 +81,17 @@
                        <&macro_release &kp LCTRL >,
 		       <&macro_release &kp Z >;
         };
+
+	m_letras_que: m_letras_que {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp Q >,
+                       <&macro_release &kp Q >,
+                       <&macro_press   &kp U >,
+		       <&macro_release &kp U >;
+                       <&macro_press   &kp E >,
+		       <&macro_release &kp E >;
+	}
     };
     
     combos {
@@ -170,6 +181,14 @@
             layers        = <BASE>;
             bindings      = <&kp P>;
         };
+
+	c_qwerty_que {
+            timeout-ms    = <50>;
+            key-positions = <11 12 13>;
+            layers        = <BASE>;
+            bindings      = <&m_letras_que>;
+        };
+
 
 /* Layout */
 //    0  1  2  3  4      5  6  7  8  9 
