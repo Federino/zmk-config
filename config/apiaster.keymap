@@ -114,6 +114,15 @@
         wasd_gaming_toggle {
             timeout-ms    = <50>;
             key-positions = <20 32>;
+            key-positions = <35 17>;
+            layers        = <BASE COLEMAK ENGRAM_ESP>;
+            bindings      = <&tog ENGRAM_ESP>;
+                       
+        };
+
+        wasd_gaming_toggle {
+            timeout-ms    = <50>;
+            key-positions = <20 32>;
             layers        = <BASE COLEMAK WASD>;
             bindings      = <&tog WASD>;
                        
@@ -318,37 +327,11 @@
             display-name = "qwerty";
 // ------------------------------------------------------------------------------------------------------------
 //         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
-//         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
-// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
-// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
-//                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
-            bindings = <
-            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
-            &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I       &kp O      &kp P
-&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr RCTRL K &hr RALT L &hr RGUI SEMI &kp ENTER
-&caps_word  &kp Z      &kp X      &kp C            &kp V             &kp B                 &mt_que SEMI N      &kp M            &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
                                   &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
 
-//        hands_down_layer {
-//            display-name = "hands down neu";
-//// ------------------------------------------------------------------------------------------------------------
-////         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
-////         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
-//// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
-//// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
-////                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
-//            bindings = <
-//            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
-//            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
-//&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr RALT I &hr RGUI H    &kp J
-//&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &kp Y      &kp K         &kp Z
-//                                &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
-//
-//                    >;
-//                };
 
         colemak_dh_layer {
             display-name = "colemak dh";
@@ -367,6 +350,32 @@
 
                     >;
                 };
+
+        engramSpa
+            display-name = "colemak dh";
+// ------------------------------------------------------------------------------------------------------------
+//         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
+//         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
+// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
+// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
+//                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
+            bindings = <
+            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
+            &kp Q      &kp W      &kp F            &kp P             &kp B                 &kp J               &kp L            &kp U       &kp Y      &kp SEMI
+&kp TAB     &hl LGUI A &hl LALT R &hl LCTRL S      &hl LSHIFT T      &kp G                 &kp M               &hr RSHFT N      &hr RCTRL E &hr RALT I &hr RGUI O    &kp ENTER
+&caps_word  &kp Z      &kp X      &kp C            &kp D             &kp V                 &kp K               &kp H            &kp COMMA   &kp DOT    &kp FSLH      &kp Z
+                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+
+        };
+
+        movement_layer {
+            display-name = "Movement";
+// ------------------------------------------------------------------------------------------------------------
+//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
+&caps_word  &kp F      &kp Y      &kp Q            &kp U             &kp MINUS             &kp EQUAL           &kp C            &kp L       &kp V      &kp G         &kp K
+                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+
+        };
 
         movement_layer {
             display-name = "Movement";
@@ -492,15 +501,6 @@
 //                &kp N1        &kp N2      &kp N3         &kp N4         &kp N5                  &kp N6    &kp N7         &kp N8          &kp N9        &kp N0    
 //        &kp F1   &hl LALT EXCL &hl LGUI AT &hl LSHFT HASH &hl LCTRL DLLR &kp PRCNT               &kp CARET &hr RCTRL AMPS &hr RSHFT ASTRK &hr RGUI LPAR &hr RALT RPAR &kp F12
 //        &kp PIPE &kp EQUAL     &kp MINUS   &kp PLUS       &kp LBRC       &kp RBRC                &kp LBKT  &kp RBKT       &kp SEMI        &kp COLON     &kp GRAVE     &kp BSLH 
-//                                                        &trans         &trans    &trans &trans &trans    &trans     
-//                    >;
-//                };
-//
-//                raise_layer {
-//                    display-name = "raise";
-//        // ------------------------------------------------------------------------------------------------------------
-//        //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//        //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
 //        // | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
 //        // |       |      |        | QWERTY  | WASD        |  boot  |                | boot  |      |       |      |  POWER   | reset |
 //        //                                   |             |        |      |  |      |       |      |
@@ -532,10 +532,23 @@
 //                    >;
 //                };
 
-
-        extra4 {
-            status = "reserved";
-        };
+//        hands_down_layer {
+//            display-name = "hands down neu";
+//// ------------------------------------------------------------------------------------------------------------
+////         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
+////         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
+//// |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
+//// |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
+////                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
+//            bindings = <
+//            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
+//            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
+//&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr RALT I &hr RGUI H    &kp J
+//&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &kp Y      &kp K         &kp Z
+//                                &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+//
+//                    >;
+//                };
 
         extra5 {
             status = "reserved";
