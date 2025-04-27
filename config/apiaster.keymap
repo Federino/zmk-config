@@ -112,14 +112,14 @@
                        
         };
 
-        wasd_gaming_toggle {
-            timeout-ms    = <50>;
-            key-positions = <20 32>;
-            key-positions = <35 17>;
-            layers        = <BASE COLEMAK ENGRAM_ESP>;
-            bindings      = <&tog ENGRAM_ESP>;
-                       
-        };
+        //wasd_gaming_toggle {
+        //    timeout-ms    = <50>;
+        //    key-positions = <20 32>;
+        //    key-positions = <35 17>;
+        //    layers        = <BASE COLEMAK ENGRAM_ESP>;
+        //    bindings      = <&tog ENGRAM_ESP>;
+        //               
+        //};
 
         wasd_gaming_toggle {
             timeout-ms    = <50>;
