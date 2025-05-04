@@ -308,14 +308,15 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
 
+        };
+
         td_parentesis: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_paren";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
+            bindings = <&kp LS(N9)>, <&kp RA(RPAR)>;
         };
-	};
     };
 
 
