@@ -334,7 +334,7 @@
         TAP_DANCE(td_menorque       , 200, NUBS        , LS(NUBS))
         TAP_DANCE(td_exclamaciones  , 200, EQUAL       , LS(N1))
         TAP_DANCE(td_interrogante   , 200, LS(EQUAL)   , LS(MINUS))
-        TAP_DANCE(td_puntos         , 200, DOT         , LS(KC_DOT))
+        //TAP_DANCE(td_puntos         , 200, DOT         , LS(KC_DOT))
         TAP_DANCE(td_coma           , 200, COMMA       , LS(COMMA))
         TAP_DANCE(td_guion          , 200, SLASH       , LS(SLASH))
         TAP_DANCE(td_buscar_vim     , 200, LS(RBRC)    , LC(RA(N3)))
