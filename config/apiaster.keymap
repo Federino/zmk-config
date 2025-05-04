@@ -24,6 +24,7 @@
 #define THUMBS_R 47 48 49
 
 
+#define DEF_COMMA ,
 //´TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
 #define COMBO(a, b, c, d, e)        \
         combo_##a {                 \
@@ -52,8 +53,8 @@
         //    bindings = <&macro_press   &kp LGUI &kp SPACE>,
         //               <&macro_release &kp LGUI &kp SPACE>;
         //};
-        MACRO(change_language, 0, &macro_press &kp LGUI &kp SPACE &macro_release &kp LGUI &kp SPACE)
-        MACRO(flecha_pointer, 0, &macro_press &kp FSLH &macro_release &FSLH &macro_press &kp LS(NON_US_BACKSLASH) &macro_release &kp LS(NON_US_BACKSLASH))
+        MACRO(change_language, 0, &macro_press &kp LGUI &kp SPACE DEF_COMMA &macro_release &kp LGUI &kp SPACE)
+        MACRO(flecha_pointer, 0, &macro_press &kp FSLH DEF_COMMA &macro_release &kp FSLH DEF_COMMA &macro_press &kp LS(NON_US_BACKSLASH) DEF_COMMA &macro_release &kp LS(NON_US_BACKSLASH))
 
         //flecha_pointer: flecha_pointer {
         //    compatible = "zmk,behavior-macro";
