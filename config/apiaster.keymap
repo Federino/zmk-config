@@ -47,6 +47,15 @@
             bindings = c;                      \
         };                                     \
 
+#define TAP_DANCE(NOMBRE, TAPPING_TERM_ms, A_BINDING, B_BINDING) \
+        tap_dance_##NOMBRE: tap_dance_##NOMBRE {                 \
+            compatible = "zmk,behavior-tap-dance";               \
+            label = "tap_dance_masmenos";                        \
+            #binding-cells = <0>;                                \
+            tapping-term-ms = <TAPPING_TERM_ms>;                 \
+            bindings = <&kp A_BINDING>, <&kp B_BINDING>;         \
+        };                                                       \
+
 //&caps_word {
 //    continue-list = <UNDERSCORE MINUS>;
 //};
@@ -270,13 +279,6 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        td_rst: reset_tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sys_reset>, <&bootloader>;
-        };
-
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -327,13 +329,15 @@
     ///////////////////////////////////////////////////////////
     // TAP DANCE SYMBOL LAYER 
     ///////////////////////////////////////////////////////////
-        td_parentesis: tap_dance_paren {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_paren";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LS(N8)>, <&kp LS(N9)>;
-        };
+        TAP_DANCE(parentesis, 200, LS(N8), LS(N9))
+
+        //td_parentesis: tap_dance_paren {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "tap_dance_paren";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <200>;
+        //    bindings = <&kp LS(N8)>, <&kp LS(N9)>;
+        //};
 
         td_brackets: tap_dance_brackets {
             compatible = "zmk,behavior-tap-dance";
