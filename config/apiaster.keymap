@@ -25,7 +25,20 @@
 
 
 //´TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
+#define COMBO(a, b, c, d, e)        \
+        combo_##a {                 \
+            timeout-ms    = <b>;    \
+            key-positions = <c>;    \
+            layers        = <d>;    \
+            bindings      = <e>;    \
+        };                          \
 
+#define MACRO(a, b, c)                         \
+        macro_##a : macro_##a {                \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <b>;              \
+            bindings = <c>;                    \
+        };                                     \
 
 //&caps_word {
 //    continue-list = <UNDERSCORE MINUS>;
@@ -33,21 +46,23 @@
 
 / {    
     macros {
-        change_language: change_language {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press   &kp LGUI &kp SPACE>,
-                       <&macro_release &kp LGUI &kp SPACE>;
-        };
+        //change_language: change_language {
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    bindings = <&macro_press   &kp LGUI &kp SPACE>,
+        //               <&macro_release &kp LGUI &kp SPACE>;
+        //};
+        MACRO(change_language, 0, &macro_press &kp LGUI &kp SPACE &macro_release &kp LGUI &kp SPACE)
+        MACRO(flecha_pointer, 0, &macro_press &kp FSLH &macro_release &FSLH &macro_press &kp LS(NON_US_BACKSLASH) &macro_release &kp LS(NON_US_BACKSLASH))
 
-        flecha_pointer: flecha_pointer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press   &kp FSLH >,
-                       <&macro_release &kp FSLH >,
-                       <&macro_press   &kp LS(NON_US_BACKSLASH) >,
-		       <&macro_release &kp LS(NON_US_BACKSLASH) >;
-        };
+        //flecha_pointer: flecha_pointer {
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    bindings = <&macro_press   &kp FSLH >,
+        //               <&macro_release &kp FSLH >,
+        //               <&macro_press   &kp LS(NON_US_BACKSLASH) >,
+		      // <&macro_release &kp LS(NON_US_BACKSLASH) >;
+        //};
 	
         m_copiar: m_copiar {
             compatible = "zmk,behavior-macro";
@@ -112,12 +127,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     combos {
         compatible = "zmk,combos";
-        combo_caps_words {
-            timeout-ms    = <50>;
-            key-positions = <27 28 29>;
-            layers        = <BASE HANDSDOWN_NEU>;
-            bindings      = <&caps_word>;
-        };
+        COMBO(caps_words, 50, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
+
+        //combo_caps_words {
+        //    timeout-ms    = <50>;
+        //    key-positions = <27 28 29>;
+        //    layers        = <BASE HANDSDOWN_NEU>;
+        //    bindings      = <&caps_word>;
+        //};
 
         hands_down_as_base {
             timeout-ms    = <50>;
