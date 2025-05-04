@@ -330,13 +330,20 @@
             display-name = "Mod-Tap";
         };
 
+        str: str {
+            compatible = "zmk,behavior-string";
+            label = "String behavior";
+            #binding-cells = <0>;
+            string = "qu";
+        };
+
 	    qu_hold_tap: qu_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "QU Hold Tap";
             #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&str QU>;
+            bindings = <&kp Q>, <&str>;
         };
 
     ///////////////////////////////////////////////////////////
