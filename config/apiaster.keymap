@@ -332,7 +332,6 @@
 
         str: str {
             compatible = "zmk,behavior-string";
-            label = "String behavior";
             #binding-cells = <0>;
             string = "qu";
         };
