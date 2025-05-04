@@ -35,7 +35,7 @@
         };                          \
 
 #define MACRO(a, b, c)                         \
-        macro_##a : macro_##a {                \
+        macro_##a: macro_##a {                 \
             compatible = "zmk,behavior-macro"; \
             #binding-cells = <b>;              \
             bindings = <c>;                    \
