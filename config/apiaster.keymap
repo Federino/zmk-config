@@ -50,7 +50,6 @@
 #define TAP_DANCE(NOMBRE, TAPPING_TERM_ms, A_BINDING, B_BINDING) \
         NOMBRE: tap_dance_##NOMBRE {                 \
             compatible = "zmk,behavior-tap-dance";               \
-            label = "tap_dance_masmenos";                        \
             #binding-cells = <0>;                                \
             tapping-term-ms = <TAPPING_TERM_ms>;                 \
             bindings = <&kp A_BINDING>, <&kp B_BINDING>;         \
@@ -329,9 +328,9 @@
     ///////////////////////////////////////////////////////////
     // TAP DANCE SYMBOL LAYER 
     ///////////////////////////////////////////////////////////
-        TAP_DANCE(td_parentesis, 200, LS(N8)          , LS(N9))
-        TAP_DANCE(td_brackets  , 200, RA(LEFT_BRACKET), RA(RIGHT_BRACKET))
-        TAP_DANCE(td_cbrackets , 200, RA(APOSTROPHE)  , RA(BACKSLASH))
+        TAP_DANCE(td_parentesis, 200, LS(N8)      , LS(N9))
+        TAP_DANCE(td_brackets  , 200, LC(RA(LBKT)), LC(RA(RBKT)))
+        TAP_DANCE(td_cbrackets , 200, LC(RA(SQT)) , LC(RA(BSLH)))
 
         //td_parentesis: tap_dance_paren {
         //    compatible = "zmk,behavior-tap-dance";
