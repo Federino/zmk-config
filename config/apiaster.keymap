@@ -210,7 +210,7 @@
                 timeout-ms    = <30>;
                 key-positions = <12 13>;
                 layers        = <BASE HANDSDOWN_NEU>;
-                bindings      = <&qu_hold_tap>;
+                bindings      = <&qu_hold_tap Q &str>;
         };
 
 	/////////////////////////////
@@ -337,12 +337,12 @@
         };
 
 	    qu_hold_tap: qu_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "QU Hold Tap";
-            #binding-cells = <0>;
-            flavor = "hold-preferred";
+            compatible      = "zmk,behavior-hold-tap";
+            display-name    = "QU Hold Tap";
+            #binding-cells  = <2>;
+            flavor          = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&str>;
+            bindings        = <&kp>, <&str>;
         };
 
     ///////////////////////////////////////////////////////////
