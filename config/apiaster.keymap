@@ -4,7 +4,7 @@
 
 /* Layers */
 #define BASE          0
-#define HANDSDOWN_NEU 1
+#define HANDSDOWN_NEU 1 //Vibranium b
 #define MOVEMENT      2
 #define SYMBOLS       3
 #define NUMBERS       4
@@ -82,18 +82,31 @@
 		       <&macro_release &kp Z >;
         };
 
-	m_letras_que: m_letras_que {
+        m_letras_que: m_letras_que {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press   &kp Q >,
                        <&macro_release &kp Q >,
                        <&macro_press   &kp U >,
-		       <&macro_release &kp U >,
+                       <&macro_release &kp U >,
                        <&macro_press   &kp E >,
-		       <&macro_release &kp E >;
-	};
+		               <&macro_release &kp E >;
+        };
+
+        m_test_handsdown: m_test_handsdown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp Q >,
+                       <&macro_release &kp Q >,
+                       <&macro_press   &kp U >,
+                       <&macro_release &kp U >;
+        }
+
     };
     
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////// COMBOS ////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     combos {
         compatible = "zmk,combos";
         combo_caps_words {
@@ -193,49 +206,66 @@
         };
 
 	/////////////////////////////
-	// COMBOS COLEMAK
+	// COMBOS HANDS DOWN VIBRANIUM
 	/////////////////////////////
-	c_colemak_Q {
+    c_handsdown_Z {
             timeout-ms    = <50>;
-            key-positions = <11 12>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp Q>;
-        };
+            key-positions = <13 14>;
+            layers        = <BASE HANDSDOWN_NEU>;
+            bindings      = <&kp Z>;
+    }
 
-	c_colemak_B {
+    c_handsdown_Qu {
             timeout-ms    = <50>;
             key-positions = <12 13>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp B>;
-        };
+            layers        = <BASE HANDSDOWN_NEU>;
+            bindings      = <&mt_test_handsdown Q &m_test_handsdown>;
+    }
 
-	c_colemak_J {
-            timeout-ms    = <50>;
-            key-positions = <16 17>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp J>;
-        };
+	/////////////////////////////
+	// COMBOS COLEMAK
+	/////////////////////////////
+	//c_colemak_Q {
+ //           timeout-ms    = <50>;
+ //           key-positions = <11 12>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp Q>;
+ //       };
 
-	c_colemak_Z {
-            timeout-ms    = <50>;
-            key-positions = <34 35>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp J>;
-        };
+	//c_colemak_B {
+ //           timeout-ms    = <50>;
+ //           key-positions = <12 13>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp B>;
+ //       };
 
-	c_colemak_V {
-            timeout-ms    = <50>;
-            key-positions = <35 36>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp V>;
-        };
+	//c_colemak_J {
+ //           timeout-ms    = <50>;
+ //           key-positions = <16 17>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp J>;
+ //       };
 
-	c_colemak_K {
-            timeout-ms    = <50>;
-            key-positions = <39 40>;
-            layers        = <HANDSDOWN_NEU>;
-            bindings      = <&kp K>;
-        };
+	//c_colemak_Z {
+ //           timeout-ms    = <50>;
+ //           key-positions = <34 35>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp J>;
+ //       };
+
+	//c_colemak_V {
+ //           timeout-ms    = <50>;
+ //           key-positions = <35 36>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp V>;
+ //       };
+
+	//c_colemak_K {
+ //           timeout-ms    = <50>;
+ //           key-positions = <39 40>;
+ //           layers        = <HANDSDOWN_NEU>;
+ //           bindings      = <&kp K>;
+ //       };
 
 /* Layout */
 //    0  1  2  3  4      5  6  7  8  9 
@@ -310,6 +340,17 @@
 
         };
 
+        mt_test_handsdown {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&mt>;
+            display-name = "Mod-Tap";
+        }
+    ///////////////////////////////////////////////////////////
+    // TAP DANCE SYMBOL LAYER 
+    ///////////////////////////////////////////////////////////
         td_parentesis: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
             label = "tap_dance_paren";
@@ -334,6 +375,49 @@
             bindings = <&kp RA(APOSTROPHE)>, <&kp RA(BACKSLASH)>;
         };
 
+    ///////////////////////////////////////////////////////////
+    // TAP DANCE HANDS DOWN CONFIG
+    ///////////////////////////////////////////////////////////
+        td_masmenos: tap_dance_masmenos {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_masmenos";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FSLASH>, <&kp RBRC>;
+        };
+
+        td_hashtag_arroba: tap_dance_hashtag_arroba {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_hashtag_arroba";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LC(RA(N3))>, <&kp LC(RA(N2))>;
+        };
+ 
+        td_div_asterisco: tap_dance_div_asterisco {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_div_asterisco";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(N7))>, <&kp LS(RBRC)>;
+        };
+
+        td_comillas_exclamacion: tap_dance_comillas_exclamacion {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_comillas_exclamacion";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(N2)>, <&kp LS(N1)>;
+        };
+
+        td_comilla_simple_interrogacion: tap_dance_comilla_simple_interrogacion {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_comilla_simple_interrogacion";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
+        };
+
     };
 
 
@@ -351,30 +435,42 @@
             bindings = <
             &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
             &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I             &kp O           &kp P
-&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L 	   &hr RGUI SEMI &kp ENTER
+&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L 	  &hr RGUI SEMI &kp ENTER
 &caps_word  &kp Z      &hl RALT X &kp C            &kp V             &kp B                 &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS BSPC   &lt SYMBOLS SPACE &lt MOVEMENT DEL
 
                     >;
                 };
 
         HANDS_DOWN_layer {
-            display-name = "hands down neu";
+            display-name = "hands down vibranium";
+            bindings = <
+            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7             &kp N8                  &kp N9                     &kp N0
+            &kp X      &kp W      &kp M            &kp G             &kp J                 &td_hashtag_arroba  &kp DOT            &td_div_asterisco       &td_comillas_exclamacion   &td_comilla_simple_interrogacion
+&kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                 &hr RGUI H    &kp ENTER
+&caps_word  &kp B      &kp P      &kp L            &kp D             &kp V                 &kp FSLH            &kp U              &kp O                   &hr RALT Y                 &kp F         &kp ENTER
+                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
+
+                    >;
+                };
+
+//        HANDS_DOWN_layer {
+//            display-name = "hands down neu";
 // ------------------------------------------------------------------------------------------------------------
 //         |   1   |   2   |    3    |   4    |   5   |              |  6  |   7    |    8    |   9   |   0   |       
 //         |   Q   |   W   |    E    |   R    |   T   |              |  Y  |   U    |    I    |   O   |   P   |        
 // |  TAB  | ALT/A | GUI/S | SHIFT/D | CTRL/F |   G   |              |  H  | CTRL/J | SHIFT/K | GUI/L | ALT/; | ENTER |
 // |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
 //                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
-            bindings = <
-            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
-            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
-&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr LALT I &hr RGUI H    &kp J
-&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &hr RALT Y &kp K         &kp Z
-                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
-
-                    >;
-                };
+//            bindings = <
+//            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8      &kp N9     &kp N0
+//            &kp W      &kp F      &kp M            &kp P             &kp V                 &kp FSLH            &kp DOT          &kp Q       &kp SEMI   &kp APOSTROPHE
+//&kp TAB     &hl LGUI R &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp B                 &kp COMMA           &hr RSHFT A      &hr RCTRL E &hr LALT I &hr RGUI H    &kp J
+//&caps_word  &kp X      &kp C      &kp L            &kp D             &kp G                 &kp FSLH            &kp U            &kp O       &hr RALT Y &kp K         &kp Z
+//                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+//
+//                    >;
+//                };
 
 //        COLEMAK_dh_layer {
 //            display-name = "colemak dh";
