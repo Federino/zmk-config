@@ -59,8 +59,8 @@
         //    bindings = <&macro_press   &kp LGUI &kp SPACE>,
         //               <&macro_release &kp LGUI &kp SPACE>;
         //};
-        MACRO(change_language, 0, &macro_press &kp LGUI &kp SPACE DEF_COMMA &macro_release &kp LGUI &kp SPACE)
-        MACRO(flecha_pointer, 0, DEF_TEST(&macro_press &kp FSLH) DEF_TEST(&macro_press &kp LS(NON_US_BACKSLASH))  DEF_TEST_FFF(&macro_release &kp LS(NON_US_BACKSLASH)))
+        MACRO(change_language, 0, DEF_TEST(&macro_press &kp LGUI &kp SPACE) DEF_TEST_FFF(&macro_release &kp LGUI &kp SPACE))
+        MACRO(flecha_pointer, 0, DEF_TEST(&macro_press &kp FSLH) DEF_TEST(&macro_press &kp LS(NON_US_BACKSLASH)) DEF_TEST(&macro_release &kp FSLH)  DEF_TEST_FFF(&macro_release &kp LS(NON_US_BACKSLASH)))
 
         //flecha_pointer: flecha_pointer {
         //    compatible = "zmk,behavior-macro";
