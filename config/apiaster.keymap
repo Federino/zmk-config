@@ -400,7 +400,7 @@
             label = "tap_dance_div_asterisco";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(N7))>, <&kp LS(RBRC)>;
+            bindings = <&kp LS(N7)>, <&kp LS(RBRC)>;
         };
 
         td_comillas_exclamacion: tap_dance_comillas_exclamacion {
