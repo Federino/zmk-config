@@ -93,15 +93,6 @@
 		               <&macro_release &kp E >;
         };
 
-        m_test_handsdown: m_test_handsdown {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press   &kp Q >,
-                       <&macro_release &kp Q >,
-                       <&macro_press   &kp U >,
-                       <&macro_release &kp U >;
-        };
-
     };
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -216,10 +207,10 @@
         };
 
         c_handsdown_Qu {
-                timeout-ms    = <50>;
+                timeout-ms    = <30>;
                 key-positions = <12 13>;
                 layers        = <BASE HANDSDOWN_NEU>;
-                bindings      = <&mt_test_handsdown Q &m_test_handsdown>;
+                bindings      = <&qu_hold_tap>;
         };
 
 	/////////////////////////////
@@ -337,16 +328,15 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
-
         };
 
-        mt_test_handsdown {
+	    qu_hold_tap: qu_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
+            label = "QU Hold Tap"
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&mt>;
-            display-name = "Mod-Tap";
+            bindings = <&kp Q>, <&str QU>;
         };
 
     ///////////////////////////////////////////////////////////
