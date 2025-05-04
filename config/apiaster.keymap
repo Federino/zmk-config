@@ -222,7 +222,7 @@
                 timeout-ms    = <30>;
                 key-positions = <12 13>;
                 layers        = <BASE HANDSDOWN_NEU>;
-                bindings      = <&qu_hold_tap 0 Q>;
+                bindings      = <&qu_hold_tap Q 0>;
         };
 
 	/////////////////////////////
@@ -446,7 +446,7 @@
             &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I             &kp O           &kp P
 &kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L 	  &hr RGUI SEMI &kp ENTER
 &caps_word  &kp Z      &hl RALT X &kp C            &kp V             &kp B                 &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS BSPC   &lt SYMBOLS SPACE &lt MOVEMENT DEL
+                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
