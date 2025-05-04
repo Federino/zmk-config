@@ -202,15 +202,15 @@
         //    bindings      = <&kp LS(N0)>;
         //};
 
-        COMBO(caps_words, 50, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
-        COMBO(hands_down_as_base, 50, 12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
-        CaOMBO(wasd_gaming_toggle, 50, 20 32, BASE HANDSDOWN_NEU, &tog WASD)
-        COMBO(change_language, 50, 0 9, BASE HANDSDOWN_NEU, &change_language)
-        COMBO(punto_coma, 50, 23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
-        COMBO(flecha_prog, 50, 14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
-        COMBO(dos_puntos, 50, 24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
-        COMBO(barra_baja, 50, 36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
-        COMBO(igual, 50, 25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
+        COMBO(caps_words         , 50, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
+        COMBO(hands_down_as_base , 50, 12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
+        COMBO(wasd_gaming_toggle, 50, 20 32, BASE HANDSDOWN_NEU, &tog WASD)
+        COMBO(change_language    , 50, 0 9, BASE HANDSDOWN_NEU, &change_language)
+        COMBO(punto_coma         , 50, 23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
+        COMBO(flecha_prog        , 50, 14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
+        COMBO(dos_puntos         , 50, 24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
+        COMBO(barra_baja         , 50, 36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
+        COMBO(igual              , 50, 25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
 
         /////////////////////////////
         // COMBOS QWERTY
