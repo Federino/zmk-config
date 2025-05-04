@@ -203,107 +203,39 @@
         //};
 
         COMBO(caps_words         , 50, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
-        COMBO(hands_down_as_base , 50, 12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
-        COMBO(wasd_gaming_toggle, 50, 20 32, BASE HANDSDOWN_NEU, &tog WASD)
-        COMBO(change_language    , 50, 0 9, BASE HANDSDOWN_NEU, &change_language)
-        COMBO(punto_coma         , 50, 23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
-        COMBO(flecha_prog        , 50, 14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
-        COMBO(dos_puntos         , 50, 24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
-        COMBO(barra_baja         , 50, 36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
-        COMBO(igual              , 50, 25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
+        COMBO(hands_down_as_base , 50,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
+        COMBO(wasd_gaming_toggle , 50,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
+        COMBO(change_language    , 50,      0 9, BASE HANDSDOWN_NEU, &change_language)
+        COMBO(punto_coma         , 50,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
+        COMBO(flecha_prog        , 50,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
+        COMBO(dos_puntos         , 50,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
+        COMBO(barra_baja         , 50,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
+        COMBO(igual              , 50,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
 
         /////////////////////////////
         // COMBOS QWERTY
         /////////////////////////////
-        c_qwerty_q {
-            timeout-ms    = <50>;
-            key-positions = <11 12>;
-            layers        = <BASE>;
-            bindings      = <&kp Q>;
-        };
-    
-        c_qwerty_z {
-            timeout-ms    = <50>;
-            key-positions = <34 35>;
-            layers        = <BASE>;
-            bindings      = <&kp Z>;
-        };
-
-        c_qwerty_p {
-            timeout-ms    = <50>;
-            key-positions = <17 18>;
-            layers        = <BASE>;
-            bindings      = <&kp P>;
-        };
-
-        c_qwerty_que {
-            timeout-ms    = <50>;
-            key-positions = <11 12 13>;
-            layers        = <BASE>;
-            bindings      = <&m_letras_que>;
-        };
+        COMBO(qwerty_q, 50,    11 12, BASE, &kp Q)
 
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
-        c_handsdown_Z {
-                timeout-ms    = <50>;
-                key-positions = <13 14>;
-                layers        = <BASE HANDSDOWN_NEU>;
-                bindings      = <&kp Z>;
-        };
+        COMBO(handsdown_Z , 50, 11 12, BASE, &kp Q)
+        COMBO(handsdown_Qu, 50, 12 13, BASE, &qu_hold_tap Q 0)
+        //c_handsdown_Z {
+        //        timeout-ms    = <50>;
+        //        key-positions = <13 14>;
+        //        layers        = <BASE HANDSDOWN_NEU>;
+        //        bindings      = <&kp Z>;
+        //};
 
-        c_handsdown_Qu {
-                timeout-ms    = <30>;
-                key-positions = <12 13>;
-                layers        = <BASE HANDSDOWN_NEU>;
-                bindings      = <&qu_hold_tap Q 0>;
-        };
+        //c_handsdown_Qu {
+        //        timeout-ms    = <30>;
+        //        key-positions = <12 13>;
+        //        layers        = <BASE HANDSDOWN_NEU>;
+        //        bindings      = <&qu_hold_tap Q 0>;
+        //};
 
-	/////////////////////////////
-	// COMBOS COLEMAK
-	/////////////////////////////
-    //c_colemak_Q {
-    //           timeout-ms    = <50>;
-    //           key-positions = <11 12>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp Q>;
-    //       };
-
-        //c_colemak_B {
-    //           timeout-ms    = <50>;
-    //           key-positions = <12 13>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp B>;
-    //       };
-
-        //c_colemak_J {
-    //           timeout-ms    = <50>;
-    //           key-positions = <16 17>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp J>;
-    //       };
-
-        //c_colemak_Z {
-    //           timeout-ms    = <50>;
-    //           key-positions = <34 35>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp J>;
-    //       };
-
-        //c_colemak_V {
-    //           timeout-ms    = <50>;
-    //           key-positions = <35 36>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp V>;
-    //       };
-
-        //c_colemak_K {
-    //           timeout-ms    = <50>;
-    //           key-positions = <39 40>;
-    //           layers        = <HANDSDOWN_NEU>;
-    //           bindings      = <&kp K>;
-    //       };
 
     /* Layout */
     //    0  1  2  3  4      5  6  7  8  9 
