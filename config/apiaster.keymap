@@ -384,7 +384,7 @@
             label = "tap_dance_masmenos";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp FSLASH>, <&kp RBRC>;
+            bindings = <&kp SLASH>, <&kp RBRC>;
         };
 
         td_hashtag_arroba: tap_dance_hashtag_arroba {
