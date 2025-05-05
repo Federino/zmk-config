@@ -359,7 +359,7 @@
 	    label = "tap_dance_td_buscar_vim";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LS(RBRC)>, <&kp LC(RA(N3))>;
+            bindings = <&kp LS(RBRC)>, <&kp RA(N3)>;
 	};
 
         TAP_DANCE(td_marcas_vim     , 200, LS(N2)      , MINUS)
@@ -519,7 +519,7 @@
             bindings = <
           &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6            &kp N7         &kp N8       &kp N9         &kp N0 
           &kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp NON_US_BACKSLASH       &td_interrogante  &td_brackets   &td_puntos   &td_marcas_vim &kp RA(N2) 
-&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &td_exclamaciones &td_parentesis &td_coma     &td_buscar_vim &kp td_porcentaje  &none 
+&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &td_exclamaciones &td_parentesis &td_coma     &td_buscar_vim &td_porcentaje  &none 
 &none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &td_fwdslash      &td_cbrackets  &td_menorque &td_pipe       &kp LS(N1)         &none
                                            &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos
                                        
