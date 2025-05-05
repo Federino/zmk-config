@@ -342,7 +342,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&kp LS(COMMA)>;
-	}
+	};
 	
         //TAP_DANCE(td_guion          , 200, SLASH       , LS(SLASH))
 	td_guion: tap_dance_td_guion {
@@ -351,7 +351,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SLASH>, <&kp LS(SLASH)>;
-	}
+	};
 
         //TAP_DANCE(td_buscar_vim     , 200, LS(RBRC)    , LC(RA(N3)))
 	td_buscar_vim: tap_dance_td_buscar_vim {
@@ -360,7 +360,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LS(RBRC)>, <&kp LC(RA(N3))>;
-	}
+	};
 
         TAP_DANCE(td_marcas_vim     , 200, LS(N2)      , MINUS)
         TAP_DANCE(td_fwdslash       , 200, LS(N7)      , LC(RA(GRAVE)))
