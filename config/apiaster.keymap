@@ -334,18 +334,34 @@
         TAP_DANCE(td_menorque       , 200, NUBS        , LS(NUBS))
         TAP_DANCE(td_exclamaciones  , 200, EQUAL       , LS(N1))
         TAP_DANCE(td_interrogante   , 200, LS(EQUAL)   , LS(MINUS))
-        //TAP_DANCE(td_puntos         , 200, DOT         , LS(KC_DOT))
-	td_puntos: tap_dance_td_puntos {
+        TAP_DANCE(td_puntos         , 200, DOT         , LS(DOT))
+        //TAP_DANCE(td_coma           , 200, COMMA       , LS(COMMA))
+	td_coma: tap_dance_td_coma {
 	    compatible = "zmk,behavior-tap-dance";
-	    label = "tap_dance_td_puntos";
+	    label = "tap_dance_td_coma";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp LS(DOT)>;
-	};
+            bindings = <&kp COMMA>, <&kp LS(COMMA)>;
+	}
+	
+        //TAP_DANCE(td_guion          , 200, SLASH       , LS(SLASH))
+	td_guion: tap_dance_td_guion {
+	    compatible = "zmk,behavior-tap-dance";
+	    label = "tap_dance_td_guion";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SLASH>, <&kp LS(SLASH)>;
+	}
 
-        TAP_DANCE(td_coma           , 200, COMMA       , LS(COMMA))
-        TAP_DANCE(td_guion          , 200, SLASH       , LS(SLASH))
-        TAP_DANCE(td_buscar_vim     , 200, LS(RBRC)    , LC(RA(N3)))
+        //TAP_DANCE(td_buscar_vim     , 200, LS(RBRC)    , LC(RA(N3)))
+	td_buscar_vim: tap_dance_td_buscar_vim {
+	    compatible = "zmk,behavior-tap-dance";
+	    label = "tap_dance_td_buscar_vim";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LS(RBRC)>, <&kp LC(RA(N3))>;
+	}
+
         TAP_DANCE(td_marcas_vim     , 200, LS(N2)      , MINUS)
         TAP_DANCE(td_fwdslash       , 200, LS(N7)      , LC(RA(GRAVE)))
         TAP_DANCE(td_pipe           , 200, LC(RA(N1))  , LC(RA(N2)))
