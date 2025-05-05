@@ -330,7 +330,7 @@
             &kp X      &kp W      &kp M            &kp G             &kp J                 &td_hashtag_arroba  &kp DOT            &td_div_asterisco       &td_comillas_exclamacion   &td_comilla_simple_interrogacion
 &kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                 &hr RGUI H    &kp ENTER
 &caps_word  &kp B      &kp P      &kp L            &kp D             &kp V                 &kp FSLH            &kp U              &kp O                   &hr RALT Y                 &kp F         &kp ENTER
-                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS SPACE     &lt NUMBERS ENTER   &lt SYMBOLS BSPC   &lt MOVEMENT DEL
+                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS ENTER     &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
 
                     >;
                 };
