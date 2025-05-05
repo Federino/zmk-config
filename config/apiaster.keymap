@@ -347,13 +347,13 @@
     ///////////////////////////////////////////////////////////
     // TAP DANCE HANDS DOWN CONFIG
     ///////////////////////////////////////////////////////////
-        td_masmenos: tap_dance_masmenos {
-            compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_masmenos";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SLASH>, <&kp RBRC>;
-        };
+        //td_masmenos: tap_dance_masmenos {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "tap_dance_masmenos";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <200>;
+        //    bindings = <&kp SLASH>, <&kp RBRC>;
+        //};
 
         td_hashtag_arroba: tap_dance_hashtag_arroba {
             compatible = "zmk,behavior-tap-dance";
