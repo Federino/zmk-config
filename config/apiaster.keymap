@@ -254,7 +254,7 @@
         TAP_DANCE(td_fwdslash       , 200, LS(N7)      , RA(GRAVE))
         TAP_DANCE(td_pipe           , 200, RA(N1)      , RA(N2))
         TAP_DANCE(td_porcentaje     , 200, LS(N5)      , LS(N4))
-        TAP_DANCE(td_masmenos       , 200, RBRC        , SLASH)
+        TAP_DANCE(td_masmenos       , 200, RBKT        , SLASH)
 
     ///////////////////////////////////////////////////////////
     // TAP DANCE HANDS DOWN CONFIG
