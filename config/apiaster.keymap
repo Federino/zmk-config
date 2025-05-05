@@ -340,7 +340,7 @@
 	    label = "tap_dance_td_puntos";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DOT>, <&kp LS(KC_DOT)>;
+            bindings = <&kp DOT>, <&kp LS(DOT)>;
 	};
 
         TAP_DANCE(td_coma           , 200, COMMA       , LS(COMMA))
