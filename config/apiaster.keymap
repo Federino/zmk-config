@@ -142,74 +142,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     combos {
         compatible = "zmk,combos";
-        //combo_caps_words {
-        //    timeout-ms    = <50>;
-        //    key-positions = <27 28 29>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&caps_word>;
-        //};
-
-        //hands_down_as_base {
-        //    timeout-ms    = <50>;
-        //    key-positions = <12 40>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&tog HANDSDOWN_NEU>;
-        //               
-        //};
-
-        //wasd_gaming_toggle {
-        //    timeout-ms    = <50>;
-        //    key-positions = <20 32>;
-        //    layers        = <BASE HANDSDOWN_NEU WASD>;
-        //    bindings      = <&tog WASD>;
-        //               
-        //};
-
-
-        //change_language {
-        //    timeout-ms    = <50>;
-        //    key-positions = <0 9>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&change_language>;
-        //};
-
-
-        //c_punto_coma {
-        //    timeout-ms    = <50>;
-        //    key-positions = <23 28>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&kp LS(COMMA)>;
-        //};
-
-        //c_flecha_prog {
-        //    timeout-ms    = <50>;
-        //    key-positions = <14 15>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&flecha_pointer>;
-        //};
-
-
-        //c_dos_puntos {
-        //    timeout-ms    = <50>;
-        //    key-positions = <24 27>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&kp LS(DOT)>;
-        //};
-
-        //c_barra_baja {
-        //    timeout-ms    = <50>;
-        //    key-positions = <36 39>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&kp LS(FSLH)>;
-        //};
-
-        //c_igual {
-        //    timeout-ms    = <50>;
-        //    key-positions = <25 26>;
-        //    layers        = <BASE HANDSDOWN_NEU>;
-        //    bindings      = <&kp LS(N0)>;
-        //};
-
         COMBO(caps_words         , 50, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
         COMBO(hands_down_as_base , 50,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
         COMBO(wasd_gaming_toggle , 50,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
@@ -230,20 +162,6 @@
         /////////////////////////////
         COMBO(handsdown_Z , 50, 11 12, BASE, &kp Q)
         COMBO(handsdown_Qu, 50, 12 13, BASE, &qu_hold_tap Q 0)
-        //c_handsdown_Z {
-        //        timeout-ms    = <50>;
-        //        key-positions = <13 14>;
-        //        layers        = <BASE HANDSDOWN_NEU>;
-        //        bindings      = <&kp Z>;
-        //};
-
-        //c_handsdown_Qu {
-        //        timeout-ms    = <30>;
-        //        key-positions = <12 13>;
-        //        layers        = <BASE HANDSDOWN_NEU>;
-        //        bindings      = <&qu_hold_tap Q 0>;
-        //};
-
 
     /* Layout */
     //    0  1  2  3  4      5  6  7  8  9 
@@ -310,12 +228,6 @@
             display-name = "Mod-Tap";
         };
 
-        str: str {
-            compatible = "zmk,behavior-string";
-            #binding-cells = <0>;
-            string = "qu";
-        };
-
 	    qu_hold_tap: qu_hold_tap {
             compatible      = "zmk,behavior-hold-tap";
             display-name    = "QU Hold Tap";
@@ -336,32 +248,8 @@
         TAP_DANCE(td_interrogante   , 200, LS(EQUAL)   , LS(MINUS))
         TAP_DANCE(td_puntos         , 200, DOT         , LS(DOT))
         TAP_DANCE(td_coma           , 200, COMMA       , LS(COMMA))
-	//td_coma: tap_dance_td_coma {
-	//    compatible = "zmk,behavior-tap-dance";
-	//    label = "tap_dance_td_coma";
-        //    #binding-cells = <0>;
-        //    tapping-term-ms = <200>;
-        //    bindings = <&kp COMMA>, <&kp LS(COMMA)>;
-	//};
-	
         TAP_DANCE(td_guion          , 200, SLASH       , LS(SLASH))
-	//td_guion: tap_dance_td_guion {
-	//    compatible = "zmk,behavior-tap-dance";
-	//    label = "tap_dance_td_guion";
-        //    #binding-cells = <0>;
-        //    tapping-term-ms = <200>;
-        //    bindings = <&kp SLASH>, <&kp LS(SLASH)>;
-	//};
-
         TAP_DANCE(td_buscar_vim     , 200, LS(RBRC)    , RA(N3))
-	//td_buscar_vim: tap_dance_td_buscar_vim {
-	//    compatible = "zmk,behavior-tap-dance";
-	//    label = "tap_dance_td_buscar_vim";
-        //    #binding-cells = <0>;
-        //    tapping-term-ms = <200>;
-        //    bindings = <&kp LS(RBRC)>, <&kp RA(N3)>;
-	//};
-
         TAP_DANCE(td_marcas_vim     , 200, LS(N2)      , MINUS)
         TAP_DANCE(td_fwdslash       , 200, LS(N7)      , RA(GRAVE))
         TAP_DANCE(td_pipe           , 200, RA(N1)      , RA(N2))
