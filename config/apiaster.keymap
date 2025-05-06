@@ -135,6 +135,15 @@
                        <&macro_release &kp U >;
         };
 
+        m_close_window: m_close_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press   &kp LCTRL >,
+                       <&macro_press   &kp W >,
+                       <&macro_release &kp LCTRL >,
+                       <&macro_release &kp W >;
+        };
+
     };
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -389,8 +398,8 @@
             bindings = <
           &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8        &kp N9           &kp N0
           &none      &none   	 &m_pegar         &m_copiar         &m_cortar             &kp PAGE_DOWN       &kp HOME         &none         &kp END          &kp PAGE_UP 
-&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none                 &kp LEFT_ARROW      &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none
-&kp BSLH  &none      &none       &kp DEL          &m_deshacer       &kp DEL               &none               &none            &none         &none            &none         &kp SQT
+&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		  &kp LEFT_ARROW      &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none
+&kp BSLH  &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none               &none            &none         &none            &none         &kp SQT
                                  &none            &none             &none                 &kp ENTER           &kp BSPC         &kp DEL
 
                     >;
