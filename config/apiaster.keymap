@@ -169,8 +169,8 @@
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
-        COMBO(handsdown_Z , 50, 11 12, BASE, &kp Q)
-        COMBO(handsdown_Qu, 50, 12 13, BASE, &qu_hold_tap Q 0)
+        COMBO(handsdown_Z , 50, 11 12, HANDSDOWN_NEU, &kp Q)
+        COMBO(handsdown_Qu, 50, 12 13, HANDSDOWN_NEU, &qu_hold_tap Q 0)
 
     /* Layout */
     //    0  1  2  3  4      5  6  7  8  9 
@@ -221,14 +221,7 @@
             //toggle-mode = "on";
         };
 
-        tog_off: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle layer OFF";
-            //toggle-mode = "off";
-        };
-
-	    mt_que: mod_tap_que {
+        mt_que: mod_tap_que {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -237,7 +230,7 @@
             display-name = "Mod-Tap";
         };
 
-	    qu_hold_tap: qu_hold_tap {
+        qu_hold_tap: qu_hold_tap {
             compatible      = "zmk,behavior-hold-tap";
             display-name    = "QU Hold Tap";
             #binding-cells  = <2>;
