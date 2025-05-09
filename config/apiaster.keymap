@@ -328,10 +328,10 @@
         HANDS_DOWN_layer {
             display-name = "hands down vibranium";
             bindings = <
-            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7             &kp N8                  &kp N9                     &kp N0
-            &kp X      &kp W      &kp M            &kp G             &kp J                 &td_hashtag_arroba  &kp DOT            &td_div_asterisco       &td_comillas_exclamacion   &td_comilla_simple_interrogacion
-&kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                 &hr RGUI H    &kp ENTER
-&caps_word  &kp B      &kp P      &kp L            &kp D             &kp V                 &kp FSLH            &kp U              &kp O                   &hr RALT Y                 &kp F         &kp ENTER
+            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7             &kp N8                  &kp N9                             &kp N0
+            &kp X      &kp W      &kp M            &kp G             &kp J                 &td_hashtag_arroba  &kp U              &kp O                   &kp Y                              &kp F
+&kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                         &hr RGUI H       		      &kp ENTER
+&caps_word  &kp B      &kp P      &kp L            &kp D             &kp V                 &kp FSLH            &kp DOT            &td_div_asterisco       &hr RALT td_comillas_exclamacion   &td_comilla_simple_interrogacion &kp ENTER
                                   &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS ENTER     &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
 
                     >;
