@@ -4,7 +4,7 @@
 
 /* Layers */
 #define BASE          0
-#define HANDSDOWN_NEU 1 //Vibranium b
+#define HANDSDOWN_NEU 1 //Promethium https://cyanophage.github.io/playground.html?layout=fpdlx%C3%B1uoybzsnthk%2Caeicqvwgmj-.%27%3D%2F%5Cr&mode=ergo&lan=spanish
 #define MOVEMENT      2
 #define SYMBOLS       3
 #define NUMBERS       4
@@ -144,6 +144,23 @@
                        <&macro_release &kp W >;
         };
 
+	m_tilde: m_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT >;
+        }
+
+	m_tilde_invertida: m_tilde_invertida {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT >;
+        }
+
+	m_acento_circunflejo: m_acento_circunflejo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LBKT)>;
+        }
     };
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -169,8 +186,13 @@
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
-        COMBO(handsdown_Z , 50, 11 12, HANDSDOWN_NEU, &kp Q)
-        COMBO(handsdown_Qu, 50, 12 13, HANDSDOWN_NEU, &qu_hold_tap Q 0)
+        COMBO(handsdown_Q                  , 51, 29 30, HANDSDOWN_NEU     , &kp Q 		 )
+        COMBO(handsdown_Qu                 , 50, 12 13, HANDSDOWN_NEU     , &qu_hold_tap Q 0     )
+        COMBO(handsdown_Z                  , 50, 17 18, HANDSDOWN_NEU     , &kp Z    	 	 )
+        COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
+        COMBO(handsdown_tilde_invertida    , 50, 28 29, BASE HANDSDOWN_NEU, &m_tilde_invertida   )
+        COMBO(handsdown_acento_circunflejo , 50, 27 29, BASE HANDSDOWN_NEU, &m_acento_circunflejo)
+
 
     /* Layout */
     //    0  1  2  3  4      5  6  7  8  9 
@@ -304,6 +326,9 @@
     };
 
 
+    /////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////// LAYERS /////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////
     keymap {
         compatible = "zmk,keymap";
 
@@ -326,16 +351,28 @@
                 };
 
         HANDS_DOWN_layer {
-            display-name = "hands down inverted vibranium";
+            display-name = "hands down promethium";
             bindings = <
             &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8                  &kp N9                    &kp N0
-            &kp B      &hl RALT P &kp L            &kp D             &kp V                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp F
-&kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI H       		     &kp ENTER
-&caps_word  &kp X      &kp W      &kp M            &kp G             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
+            &kp F      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp B
+&kp TAB     &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI C       		      &kp ENTER
+&kp BLOCK_  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
                                   &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS ENTER     /*||*/   &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
 
                     >;
                 };
+
+//        HANDS_DOWN_layer {
+//            display-name = "hands down inverted vibranium";
+//            bindings = <
+//            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8                  &kp N9                    &kp N0
+//            &kp B      &hl RALT P &kp L            &kp D             &kp V                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp F
+//&kp TAB     &hl LGUI S &hl LALT C &hl LCTRL N      &hl LSHIFT T      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI H       		     &kp ENTER
+//&caps_word  &kp X      &kp W      &kp M            &kp G             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
+//                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS ENTER     /*||*/   &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
+//
+//                    >;
+//                };
 
 //        HANDS_DOWN_layer {
 //            display-name = "hands down neu";
