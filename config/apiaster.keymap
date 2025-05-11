@@ -148,19 +148,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT >;
-        }
+        };
 
 	m_tilde_invertida: m_tilde_invertida {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBKT >;
-        }
+        };
 
 	m_acento_circunflejo: m_acento_circunflejo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LBKT)>;
-        }
+        };
     };
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -341,11 +341,11 @@
 // |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
 //                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
             bindings = <
-            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
-            &kp Q      &kp W      &kp E            &kp R             &kp T                 &kp Y               &kp U            &kp I             &kp O           &kp P
-&kp TAB     &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G                 &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L 	  &hr RGUI SEMI &kp ENTER
-&caps_word  &kp Z      &hl RALT X &kp C            &kp V             &kp B                 &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB       &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+                &kp N1     &kp N2     &kp N3           &kp N4            &kp N5       /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
+                &kp Q      &kp W      &kp E            &kp R             &kp T        /*||*/    &kp Y               &kp U            &kp I             &kp O           &kp P
+&kp TAB         &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G        /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &kp ENTER
+&kp BLOCK_MAYUS &kp Z      &hl RALT X &kp C            &kp V             &kp B        /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
+                                  &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB  /*||*/    &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
@@ -353,11 +353,11 @@
         HANDS_DOWN_layer {
             display-name = "hands down promethium";
             bindings = <
-            &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8                  &kp N9                    &kp N0
-            &kp F      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp B
-&kp TAB     &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI C       		      &kp ENTER
-&kp BLOCK_  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
-                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS ENTER     /*||*/   &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
+                 &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8                  &kp N9                    &kp N0
+                 &kp F      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp B
+&kp TAB          &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI C       		   &kp ENTER
+&kp BLOCK_MAYUS  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
+                                  &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB            /*||*/   &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
 
                     >;
                 };
