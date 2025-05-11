@@ -355,7 +355,7 @@
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8                  &kp N9                    &kp N0
           &kp F      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &td_hashtag_arroba  &kp U              &kp O                   &hr RALT Y                &kp B
-&kp TAB   &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI C       		   &kp ENTER
+&kp TAB   &hl LGUI C &hl LALT N &hl LCTRL T      &hl LSHIFT S      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E             &hr LALT I                &hr RGUI H       		    &kp ENTER
 &kp CAPS  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &td_div_asterisco       &td_comillas_exclamacion  &td_comilla_simple_interrogacion &kp ENTER
                                   &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB            /*||*/   &lt NUMBERS BSPC   &lt SYMBOLS SPACE   &lt MOVEMENT DEL
 
