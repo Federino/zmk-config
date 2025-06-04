@@ -354,9 +354,9 @@
             display-name = "hands down promethium";
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8             &kp N9      &kp N0
-          &kp H      &hl RALT F &kp D            &kp L             &kp X                 /*||*/   &kp SEMI            &kp U              &kp O              &hr RALT Y  &kp Q
-&kp TAB   &hl LGUI P &hl LALT S &hl LCTRL N      &hl LSHIFT T      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C       		    &kp ENTER
-&kp CAPS  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &kp B              &kp H       &td_comilla_simple_interrogacion    &kp ENTER
+          &kp H      &hl RALT F &kp D            &kp L             &kp X                 /*||*/   &kp SEMI            &kp Y              &kp U              &hr RALT O  &kp Q
+&kp TAB   &hl LGUI P &hl LALT N &hl LCTRL T      &hl LSHIFT S      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C       		    &kp ENTER
+&kp CAPS  &kp V      &kp W      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &kp B              &kp Z       &td_comilla_simple_interrogacion    &kp ENTER
                                 &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
 
                     >;
@@ -426,10 +426,10 @@
 //                            &none     &none      &none              &none           &kp BACK        &kp DEL
 //            >;
             bindings = <
-          &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8        &kp N9           &kp N0
-          &none      &none   	 &m_pegar         &m_copiar         &m_cortar             &kp PAGE_DOWN       &kp HOME         &none         &kp END          &kp PAGE_UP 
-&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		  &kp LEFT_ARROW      &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none         &none
-&kp BSLH  &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none               &none            &none         &none            &none         &kp SQT
+          &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8          &kp N9           &kp N0
+          &none      &none   	 &m_pegar         &m_copiar         &m_cortar             &kp PAGE_DOWN       &kp HOME         &kp UP_ARROW    &kp END          &kp PAGE_UP 
+&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		  &kp LEFT_ARROW      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none         &none
+&kp BSLH  &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none               &none            &none           &none            &none         &kp SQT
                                  &none            &none             &none                 &kp ENTER           &kp BSPC         &kp DEL
 
                     >;
