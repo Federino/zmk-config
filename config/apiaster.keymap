@@ -451,7 +451,7 @@
                                           //&kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos
 
           &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6                    &kp N7        &kp N8                &kp N9            &kp N0 
-          &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH       &kp LS(NON_US_BACKSLASH)  &kp PLUS      &kp STAR              &kp RA(N3)        &kp RA(N2) 
+          &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH       &kp LS(NON_US_BACKSLASH)  &kp LS(RBRC)  &kp RBRC              &kp RA(N3)        &kp RA(N2) 
 &none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)             &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none 
 &none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none
                                            &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none                     &kp LS(COMMA) &none                                 
