@@ -426,11 +426,11 @@
 //                            &none     &none      &none              &none           &kp BACK        &kp DEL
 //            >;
             bindings = <
-          &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6              &kp N7           &kp N8          &kp N9           &kp N0
-          &none      &none   	 &m_pegar         &m_copiar         &m_cortar             &kp PAGE_DOWN       &kp HOME         &kp UP_ARROW    &kp END          &kp PAGE_UP 
-&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		  &kp LEFT_ARROW      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none         &none
-&kp BSLH  &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none               &none            &none           &none            &none         &kp SQT
-                                 &none            &none             &none                 &kp ENTER           &kp BSPC         &kp DEL
+          &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6            &kp N7           &kp N8          &kp N9           &kp N0
+          &none      &none   	 &m_pegar         &m_copiar         &m_cortar             &kp PAGE_UP       &kp HOME         &kp UP_ARROW    &kp END          &kp PAGE_UP 
+&kp DEL   &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		  &kp PAGE_DOWN     &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &none         &none
+&kp BSLH  &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none             &none            &none           &none            &none         &kp SQT
+                                 &none            &none             &none                 &kp ENTER         &kp BSPC         &kp DEL
 
                     >;
         };
@@ -444,11 +444,17 @@
 // |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
 //                                   |             |        |      |  |      |       |      |
             bindings = <
-          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp RA(N4)        &td_fwdslash   &kp LS(N6)   &kp N9         &kp N0 
-          &kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp NON_US_BACKSLASH       &td_interrogante  &td_brackets   &td_puntos   &td_marcas_vim &kp RA(N2) 
-&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &td_exclamaciones &td_parentesis &td_coma     &td_buscar_vim &td_porcentaje  &none 
-&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &td_fwdslash      &td_cbrackets  &td_menorque &td_pipe       &kp LS(N1)         &none
-                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos
+          //&kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp RA(N4)        &td_fwdslash   &kp LS(N6)   &kp N9         &kp N0 
+          //&kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp NON_US_BACKSLASH       &td_interrogante  &td_brackets   &td_puntos   &td_marcas_vim &kp RA(N2) 
+//&none   &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &td_exclamaciones &td_parentesis &td_coma     &td_buscar_vim &td_porcentaje  &none 
+//&none   &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &td_fwdslash      &td_cbrackets  &td_menorque &td_pipe       &kp LS(N1)         &none
+                                          //&kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos
+
+          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6                    &kp N7        &kp N8                &kp N9            &kp N0 
+          &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH       &kp LS(NON_US_BACKSLASH)  &kp PLUS      &kp STAR              &kp RA(N3)        &kp RA(N2) 
+&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)             &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none 
+&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none
+                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none                     &kp LS(COMMA) &none                                 
                                        
             >;
         };
