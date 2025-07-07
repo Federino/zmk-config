@@ -56,8 +56,7 @@
         };                                                       \
 
 &caps_word {
-    mods = <(MOD_LSFT)>;
-    continue-list = <UNDERSCORE MINUS DELETE LSHIFT>;
+    continue-list = <UNDERSCORE MINUS DELETE LSHFT RSHFT>;
 };
 
 / {    
