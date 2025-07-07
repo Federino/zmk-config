@@ -182,9 +182,9 @@
         // COMBOS QWERTY
         /////////////////////////////
         //COMBO(qwerty_q,      50,    11 12, BASE, &kp Q)
-        COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
-        COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
-        COMBO(qwerty_pegar,  50,    11 12, BASE, &m_pegar)
+        //COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
+        //COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
+        //COMBO(qwerty_pegar,  50,    11 12, BASE, &m_pegar)
 
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
