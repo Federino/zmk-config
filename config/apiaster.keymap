@@ -181,6 +181,7 @@
         /////////////////////////////
         // COMBOS QWERTY
         /////////////////////////////
+        COMBO(print_screen,      50,    8 9, BASE, &kp PRINTSCREEN)
         //COMBO(qwerty_q,      50,    11 12, BASE, &kp Q)
         //COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
         //COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
