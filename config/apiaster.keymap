@@ -55,9 +55,10 @@
             bindings = <&kp A_BINDING>, <&kp B_BINDING>;         \
         };                                                       \
 
-//&caps_word {
-//    continue-list = <UNDERSCORE MINUS>;
-//};
+&caps_word {
+    mods = <(MOD_LSFT)>;
+    continue-list = <UNDERSCORE MINUS DELETE LSHIFT>;
+};
 
 / {    
     macros {
