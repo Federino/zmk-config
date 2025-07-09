@@ -55,8 +55,12 @@
             bindings = <&kp A_BINDING>, <&kp B_BINDING>;         \
         };                                                       \
 
+// NOTA: para en la documentacion pone que hay que usar UNDERSCORE o el caracter que sea,
+// pero eso es para el idioma INGLES. Como estamos trabajando en castellano, el caracter
+// de barrabaja se escribe con el FSLH del ingles. Por lo tanto, para que funcione como
+// queremos, tenemos que poner el caracter que corresponde en ingles.
 &caps_word {
-    continue-list = <FSLH LS(FSLH)>;
+    continue-list = <FSLH LS(FSLH) BSPC DEL>;
 };
 
 / {    
@@ -345,11 +349,11 @@
 // |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
 //                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
             bindings = <
-           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5       /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
-           &kp Q      &kp W      &kp E            &kp R             &kp T        /*||*/    &kp Y               &kp U            &kp I             &kp O           &kp P
-&kp TAB    &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G        /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &kp ENTER
-&kp CAPS   &kp Z      &hl RALT X &kp C            &kp V             &kp B        /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB  /*||*/    &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5            /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
+           &kp Q      &kp W      &kp E            &kp R             &kp T             /*||*/    &kp Y               &kp U            &kp I             &kp O           &kp P
+&kp TAB    &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &kp ENTER
+&kp CAPS   &kp Z      &hl RALT X &kp C            &kp V             &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
+                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB   /*||*/    &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
