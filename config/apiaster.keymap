@@ -56,7 +56,7 @@
         };                                                       \
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS DELETE LSHFT RSHFT>;
+    continue-list = <&hl LSHFT F &kp LS(FSLH) &hr RSHFT J>;
 };
 
 / {    
