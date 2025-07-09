@@ -56,7 +56,8 @@
         };                                                       \
 
 &caps_word {
-    continue-list = <&hl LSHFT F &kp LS(FSLH) &hr RSHFT J>;
+    //continue-list = <&hl LSHFT F &kp LS(FSLH) &hr RSHFT J>;
+    mods = <(MOD_LSFT | MOD_RSFT)>;
 };
 
 / {    
