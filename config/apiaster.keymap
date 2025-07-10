@@ -60,7 +60,7 @@
 // de barrabaja se escribe con el FSLH del ingles. Por lo tanto, para que funcione como
 // queremos, tenemos que poner el caracter que corresponde en ingles.
 &caps_word {
-    continue-list = <FSLH LS(FSLH) BSPC DEL>;
+    continue-list = <FSLH LS(FSLH) BSPC DEL SQT>;
 };
 
 / {    
