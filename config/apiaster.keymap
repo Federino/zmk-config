@@ -236,12 +236,13 @@
         };
 
         lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
+            compatible      = "zmk,behavior-hold-tap";
+            #binding-cells  = <2>;
+            flavor          = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap";
+            quick-tap-ms    = <175>;       // Hace que si hacemos un dos taps y dejamos pulsado, se utilice la tecla normal y no el cambio de capa
+            bindings        = <&mo>, <&kp>;
+            display-name    = "Layer-Tap";
         };
 
         tog_on: toggle_layer_on_only {
