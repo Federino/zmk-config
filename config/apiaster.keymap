@@ -435,7 +435,7 @@
 //                            &none     &none      &none              &none           &kp BACK        &kp DEL
 //            >;
             bindings = <
-              &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6            &kp N7           &kp N8          &kp N9           &kp N0
+              &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6            &kp N7           &kp N8          &sys_reset       &soft_off
               &none      &none       &m_pegar         &m_copiar         &m_cortar             &kp HOME          &kp PAGE_DOWN    &kp PAGE_UP     &kp END          &kp PAGE_UP 
 &tog MOVEMENT &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &none         &none
 &kp BSLH      &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none             &none            &none           &none            &none         &kp SQT
