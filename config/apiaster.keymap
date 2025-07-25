@@ -48,7 +48,7 @@
         };                                     \
 
 #define TAP_DANCE(NOMBRE, TAPPING_TERM_ms, A_BINDING, B_BINDING) \
-        NOMBRE: tap_dance_##NOMBRE {                 \
+        NOMBRE: tap_dance_##NOMBRE {                             \
             compatible = "zmk,behavior-tap-dance";               \
             #binding-cells = <0>;                                \
             tapping-term-ms = <TAPPING_TERM_ms>;                 \
@@ -200,6 +200,19 @@
         COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
         COMBO(handsdown_tilde_invertida    , 50, 28 29, BASE HANDSDOWN_NEU, &m_tilde_invertida   )
         COMBO(handsdown_acento_circunflejo , 50, 27 29, BASE HANDSDOWN_NEU, &m_acento_circunflejo)
+
+        /////////////////////////////
+        // COMBOS SYMBOL LAYER
+        /////////////////////////////
+        COMBO(symb_asterisco               , 50, 16 17, SYMBOLS            , &kp LS(RIGHT_BRACKET))
+
+        COMBO(symb_contrabarra             , 50, 26 27, SYMBOLS            , &kp RA(GRAVE)        )
+        COMBO(symb_cierre_parentesis       , 50, 27 28, SYMBOLS            , &kp LS(N9)           )
+        COMBO(symb_cierre_corchete         , 50, 28 29, SYMBOLS            , &kp RA(RIGHT_BRACKET))
+        COMBO(symb_cierre_curly_corchete   , 50, 27 29, SYMBOLS            , &kp RA(BACKSLASH)    )
+
+        COMBO(symb_comillas_dobles         , 50, 39 40, SYMBOLS            , &kp LS(N2)           )
+
 
 
     /* Layout */
@@ -443,6 +456,29 @@
 
                     >;
         };
+/*         SYMBOLS_layer { */
+/*             display-name = "symbols"; */
+/*         // ------------------------------------------------------------------------------------------------------------ */
+/*         //         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     |  */
+/*         //         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |        */
+/* // | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset | */
+/* // |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset | */
+/* //                                   |             |        |      |  |      |       |      | */
+/*             bindings = < */
+/*           //&kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp RA(N4)        &td_fwdslash   &kp LS(N6)   &kp N9         &kp N0  */
+/*           //&kp GRAVE     &kp RA(N4)         &kp LS(N0)           &kp LS(N0)      &kp NON_US_BACKSLASH       &td_interrogante  &td_brackets   &td_puntos   &td_marcas_vim &kp RA(N2)  */
+/* //&none   &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &td_exclamaciones &td_parentesis &td_coma     &td_buscar_vim &td_porcentaje  &none  */
+/* //&none   &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &td_fwdslash      &td_cbrackets  &td_menorque &td_pipe       &kp LS(N1)         &none */
+/*                                           //&kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos */
+/**/
+/*           &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6                    &kp N7        &kp N8                &kp N9            &kp N0  */
+/*           &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH       &kp LS(NON_US_BACKSLASH)  &kp RBKT      &kp LS(RBKT)                &kp RA(N3)        &kp RA(N2)  */
+/* &none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)             &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none  */
+/* &none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none */
+/*                                            &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none                     &kp LS(COMMA) &none                                  */
+                                       
+            >;
+        };
 
         SYMBOLS_layer {
             display-name = "symbols";
@@ -459,11 +495,11 @@
 //&none   &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &td_fwdslash      &td_cbrackets  &td_menorque &td_pipe       &kp LS(N1)         &none
                                           //&kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &kp LS(N0)        &td_guion      &td_masmenos
 
-          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                     &kp N6                    &kp N7        &kp N8                &kp N9            &kp N0 
-          &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH       &kp LS(NON_US_BACKSLASH)  &kp RBKT      &kp LS(RBKT)                &kp RA(N3)        &kp RA(N2) 
-&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)                 &kp RA(GRAVE)             &kp LS(N9)    &kp RA(RIGHT_BRACKET) &kp RA(BACKSLASH) &kp LS(MINUS)  &none 
-&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none
-                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none                     &kp LS(COMMA) &none                                 
+          &kp N1        &kp N2             &kp N3               &kp N4          &kp N5                /**/  &kp N6                    &kp N7        &kp N8               &kp N9            &kp N0 
+          &kp GRAVE     &kp RA(N4)         &kp LS(N6)           &kp LS(N0)      &kp NON_US_BACKSLASH  /**/  &kp LS(NON_US_BACKSLASH)  &kp RBKT      &kp LS(RBKT)         &kp RA(N3)        &kp RA(N2) 
+&none     &kp LS(EQUAL) &kp RA(APOSTROPHE) &kp RA(LEFT_BRACKET) &kp LS(N8)      &kp LS(N7)            /**/  &kp LS(N7)                &kp LS(N8)    &kp RA(LEFT_BRACKET) &kp RA(APOSTROPHE) &kp LS(MINUS)  &none 
+&none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)            /**/  &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET     &kp APOSTROPHE    &kp LS(N1)     &none
+                                           &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)    /**/  &none                     &kp LS(COMMA) &none                                 
                                        
             >;
         };
