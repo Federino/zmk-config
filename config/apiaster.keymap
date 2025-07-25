@@ -477,8 +477,8 @@
 /* &none     &kp EQUAL     &kp LS(N6)         &kp LS(N4)           &kp LS(N5)      &kp RA(N1)                 &kp LS(N2)                &kp MINUS     &kp LEFT_BRACKET      &kp APOSTROPHE    &kp LS(N1)     &none */
 /*                                            &kp LS(LEFT_BRACKET) &kp APOSTROPHE  &kp LS(APOSTROPHE)         &none                     &kp LS(COMMA) &none                                  */
                                        
-            >;
-        };
+        /*     >; */
+        /* }; */
 
         SYMBOLS_layer {
             display-name = "symbols";
