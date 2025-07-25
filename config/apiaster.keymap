@@ -372,15 +372,23 @@
                     >;
                 };
 
+//        HANDS_DOWN_layer {
+//            display-name = "hands down promethium";
+//            bindings = <
+//          &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8             &kp N9      &kp N0
+//          &kp W      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &kp SEMI            &kp U              &kp O              &hr RALT Y  &kp B
+//&kp TAB   &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C       		    &kp ENTER
+//&kp CAPS  &kp V      &kp F      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &kp Q              &kp Z       &td_comilla_simple_interrogacion    &kp ENTER
+//                                &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
+
         HANDS_DOWN_layer {
             display-name = "hands down promethium";
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8             &kp N9      &kp N0
-          &kp W      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &kp SEMI            &kp U              &kp O              &hr RALT Y  &kp B
-&kp TAB   &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C       		    &kp ENTER
-&kp CAPS  &kp V      &kp F      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &kp Q              &kp Z       &td_comilla_simple_interrogacion    &kp ENTER
-                                &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
-
+          &kp B      &hl RALT W &kp D            &kp L             &kp COMMA             /*||*/   &kp FSLH            &kp F              &kp O              &hr RALT U  &kp J
+&kp TAB   &hl LGUI C &hl LALT S &hl LCTRL T      &hl LSHIFT R      &kp X                 /*||*/   &kp Q               &hr RSHFT N        &hr RCTRL A        &hr LALT I  &hr RGUI H  &kp ENTER
+&kp CAPS  &kp V      &kp Y      &kp G            &kp M             &kp Z                 /*||*/   &kp DOT             &kp P              &kp DOT            &kp COMMA   &kp K       &kp ENTER
+                                &lt MOVEMENT ESC &lt SYMBOLS E     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
                     >;
                 };
 
