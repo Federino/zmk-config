@@ -32,13 +32,15 @@
         <a>
 
 //´TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
-#define COMBO(a, b, c, d, e)        \
-        combo_##a {                 \
-            timeout-ms    = <b>;    \
-            key-positions = <c>;    \
-            layers        = <d>;    \
-            bindings      = <e>;    \
-        };                          \
+#define COMBO(a, b, c, d, e)              \
+        combo_##a {                       \
+            timeout-ms          = <b>;    \
+            key-positions       = <c>;    \
+            layers              = <d>;    \
+            bindings            = <e>;    \
+            global-quick-tap-ms = <75>;   \
+        };                                \
+/* fin macro */
 
 #define MACRO(a, b, c)                         \
         macro_##a: macro_##a {                 \
@@ -46,6 +48,7 @@
             #binding-cells = <b>;              \
             bindings = c;                      \
         };                                     \
+/* fin macro */
 
 #define TAP_DANCE(NOMBRE, TAPPING_TERM_ms, A_BINDING, B_BINDING) \
         NOMBRE: tap_dance_##NOMBRE {                             \
@@ -54,6 +57,7 @@
             tapping-term-ms = <TAPPING_TERM_ms>;                 \
             bindings = <&kp A_BINDING>, <&kp B_BINDING>;         \
         };                                                       \
+/* fin macro */
 
 // NOTA: para en la documentacion pone que hay que usar UNDERSCORE o el caracter que sea,
 // pero eso es para el idioma INGLES. Como estamos trabajando en castellano, el caracter
