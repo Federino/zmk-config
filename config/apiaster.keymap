@@ -32,13 +32,13 @@
         <a>
 
 //´TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
-#define COMBO(a, b, c, d, e)              \
-        combo_##a {                       \
-            timeout-ms          = <b>;    \
-            key-positions       = <c>;    \
-            layers              = <d>;    \
-            bindings            = <e>;    \
-            global-quick-tap-ms = <75>;   \
+#define COMBO(a, b, c, d, e)                \
+        combo_##a {                         \
+            timeout-ms            = <b>;    \
+            key-positions         = <c>;    \
+            layers                = <d>;    \
+            bindings              = <e>;    \
+            require-prior-idle-ms = <75>;   \
         };                                \
 /* fin macro */
 
