@@ -198,12 +198,12 @@
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
-        COMBO(handsdown_Q                  , 51, 29 30, HANDSDOWN_NEU     , &kp Q 		 )
-        COMBO(handsdown_Qu                 , 50, 12 13, HANDSDOWN_NEU     , &qu_hold_tap Q 0     )
-        COMBO(handsdown_Z                  , 50, 17 18, HANDSDOWN_NEU     , &kp Z    	 	 )
-        COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
-        COMBO(handsdown_tilde_invertida    , 50, 28 29, BASE HANDSDOWN_NEU, &m_tilde_invertida   )
-        COMBO(handsdown_acento_circunflejo , 50, 27 29, BASE HANDSDOWN_NEU, &m_acento_circunflejo)
+        COMBO(handsdown_Q                  , 50, 11 12, HANDSDOWN_NEU     , &kp Z 		 )
+        //COMBO(handsdown_Qu                 , 50, 12 13, HANDSDOWN_NEU     , &qu_hold_tap Q 0     )
+        COMBO(handsdown_Z                  , 50, 11 13, HANDSDOWN_NEU     , &kp Q    	 	 )
+        //COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
+        //COMBO(handsdown_tilde_invertida    , 50, 28 29, BASE HANDSDOWN_NEU, &m_tilde_invertida   )
+        //COMBO(handsdown_acento_circunflejo , 50, 27 29, BASE HANDSDOWN_NEU, &m_acento_circunflejo)
 
         /////////////////////////////
         // COMBOS SYMBOL LAYER
@@ -369,9 +369,9 @@
             bindings = <
                &kp N1     &kp N2     &kp N3           &kp N4            &kp N5            /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
                &kp Q      &kp W      &kp E            &kp R             &kp T             /*||*/    &kp Y               &kp U            &kp I             &kp O           &kp P
-&tog MOVEMENT   &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &kp ENTER
-&kp CAPS   &kp Z      &hl RALT X &kp C            &kp V             &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB   /*||*/    &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
+&tog MOVEMENT  &hl LGUI A &hl LALT S &hl LCTRL D      &hl LSHFT F       &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &kp ENTER
+&kp CAPS       &kp Z      &hl RALT X &kp C            &kp V             &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
+                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE &lt NUMBERS TAB      i /*||*/    &lt NUMBERS ENTER   &lt SYMBOLS BSPC &lt MOVEMENT DEL
 
                     >;
                 };
@@ -386,13 +386,13 @@
 //                                &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
 
         HANDS_DOWN_layer {
-            display-name = "Sturdy";
+            display-name = "Handsdown Vibranium V";
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4             &kp N5            /*||*/   &kp N6           &kp N7             &kp N8             &kp N9      &kp N0
-          &kp V      &hl RALT M &kp L            &kp C              &kp P             /*||*/   &kp X            &kp F              &kp O              &hr RALT U  &kp J
-&kp TAB   &hl LGUI S &hl LALT T &hl LCTRL R      &hl LSHIFT D       &kp Y             /*||*/   &kp DOT          &hr RSHFT N        &hr RCTRL A        &hr LALT E  &hr RGUI I  &kp ENTER
-&kp CAPS  &kp Z      &kp K      &kp Q            &kp G              &kp W             /*||*/   &kp B            &kp H              &kp SEMI           &kp COMMA   &kp FSLH    &kp ENTER
-                                &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS SPACE  &lt MOVEMENT DEL
+          &kp H      &hl RALT P &kp M            &kp F              &kp X             /*||*/   &kp DOT          &kp U              &kp O              &hr RALT Y  &kp Q
+&kp TAB   &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp COMMA        &hr RSHFT A        &hr RCTRL I        &hr LALT R  &hr RGUI C  &kp ENTER
+&kp CAPS  &kp V      &kp W      &kp G            &kp D              &kp J             /*||*/   &kp FSLH         &kp B              &kp SEMI           &none       &none       &kp ENTER
+                                &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS E      &lt MOVEMENT DEL
                     >;
                 };
 
