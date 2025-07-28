@@ -189,7 +189,10 @@
         /////////////////////////////
         // COMBOS QWERTY
         /////////////////////////////
-        COMBO(print_screen,      50,    8 9, BASE, &kp PRINTSCREEN)
+        COMBO(print_screen              , 50,   8 9, BASE, &kp PRINTSCREEN      )
+        COMBO(qwerty_tilde              , 50, 27 28, BASE, &m_tilde  	        )
+        COMBO(qwerty_tilde_invertida    , 50, 28 29, BASE, &m_tilde_invertida   )
+        COMBO(qwerty_acento_circunflejo , 50, 27 29, BASE, &m_acento_circunflejo)
         //COMBO(qwerty_q,      50,    11 12, BASE, &kp Q)
         //COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
         //COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
