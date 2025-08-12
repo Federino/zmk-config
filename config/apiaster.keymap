@@ -202,6 +202,7 @@
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
         COMBO(handsdown_Q                  , 50, 11 12, HANDSDOWN_NEU     , &kp Z 		 )
+        COMBO(handsdown_Q                  , 50, 17 18, HANDSDOWN_NEU     , &kp B 		 )
         //COMBO(handsdown_Qu                 , 50, 12 13, HANDSDOWN_NEU     , &qu_hold_tap Q 0     )
         COMBO(handsdown_Z                  , 50, 11 13, HANDSDOWN_NEU     , &kp Q    	 	 )
         //COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
