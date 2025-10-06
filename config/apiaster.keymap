@@ -398,7 +398,7 @@
           &kp X      &hl RALT P &kp M            &kp G              &kp H             /*||*/   &kp SEMI         &kp U              &kp O              &hr RALT Y  &kp Z
 &kp Q     &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp COMMA        &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C  &lt SYMBOLS V
 &none     &kp W      &kp B      &kp F            &kp D              &kp J             /*||*/   &kp FSLH         &kp DOT            &kp EQUAL          &kp FSLH    &kp Z       &kp ENTER
-                                &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS R      &lt MOVEMENT DEL
+                                &lt MOVEMENT ESC &lt SYMBOLS R      &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS SPACE  &lt MOVEMENT DEL
                     >;
                 };
 
