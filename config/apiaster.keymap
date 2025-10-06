@@ -525,17 +525,17 @@
         NUMBERS_layer {
             display-name = "numbers";
 // ------------------------------------------------------------------------------------------------------------
-//         | MUTE | VOL+   |  VOL-   | BRI+        |  BRI-  |                |  BT 0 | BT 1 |  BT 2 | BT 3 | BT 4     | 
-//         | PREV | REWIND | PAUSE   | FASTFORWARD |  NEXT  |                | PGUP  | HOME |   ^   | END  | BT CLEAR |       
-// | reset | CAPS | INS    | PRNTSCR | MENU        | studio |                | PGDN  |   <- |   v   |  ->  |  off     | reset |
-// |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
-//                                   |             |        |      |  |      |       |      |
+//         |      |         |        |         |        |                |       |       |       |       |       | 
+//         |      |   F7    |   F8   |   F9    |        |                |   *   |   7   |   8   |   9   |   /   |           
+// |       |      |   F4    |   F5   |   F6    |        |                |   +   |   4   |   5   |   6   |   -   |   ,   |
+// |       |      |   F1    |   F2   |   F3    |        |                |   %   |   1   |   2   |   3   |   ^   |   .   |
+//                          |        |         |        |      |  |      |       |   0   |       |
             bindings = <
-          &none     &kp F10    &kp F11 &kp F12 &none       &none         &none    &none             &none     &none 
-          &none     &kp F7     &kp F8  &kp F9  &none       &kp STAR      &kp N7   &kp N8            &kp N9    &kp MINUS
-&none     &none     &kp F4     &kp F5  &kp F6  &none       &kp SLASH     &kp N4   &kp N5            &kp N6    &kp PLUS         &none 
-&none     &none     &kp F1     &kp F2  &kp F3  &none       &kp PERIOD    &kp N1   &kp N2            &kp N3    &kp LEFT_BRACKET &none
-                               &none   &none   &none       &kp BACKSLASH &kp N0   &kp LS(BACKSLASH)
+          &none     &kp F10    &kp F11 &kp F12 &none       &none         &none    &none    &none     &none 
+          &none     &kp F7     &kp F8  &kp F9  &none       &kp LS(RBKT)  &kp N7   &kp N8   &kp N9    &kp LS(N7)
+&none     &none     &kp F4     &kp F5  &kp F6  &none       &kp LS(RBKT)  &kp N4   &kp N5   &kp N6    &kp SLASH    &kp COMMA
+&none     &none     &kp F1     &kp F2  &kp F3  &none       &kp LS(N5)    &kp N1   &kp N2   &kp N3    &kp LS(LBKT) &kp DOT
+                               &none   &none   &none       &none         &kp N0   &none
             >;
         };
 
