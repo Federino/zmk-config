@@ -381,30 +381,23 @@
                 };
 
 //        HANDS_DOWN_layer {
-//            display-name = "hands down promethium";
-//            bindings = <
-//          &kp N1     &kp N2     &kp N3           &kp N4            &kp N5                /*||*/   &kp N6              &kp N7             &kp N8             &kp N9      &kp N0
-//          &kp W      &hl RALT P &kp D            &kp L             &kp X                 /*||*/   &kp SEMI            &kp U              &kp O              &hr RALT Y  &kp B
-//&kp TAB   &hl LGUI S &hl LALT N &hl LCTRL T      &hl LSHIFT H      &kp K                 /*||*/   &kp COMMA           &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C       		    &kp ENTER
-//&kp CAPS  &kp V      &kp F      &kp G            &kp M             &kp J                 /*||*/   &kp FSLH            &kp DOT            &kp Q              &kp Z       &td_comilla_simple_interrogacion    &kp ENTER
-//                                &lt MOVEMENT ESC &lt SYMBOLS R     &lt NUMBERS TAB       /*||*/   &lt NUMBERS BSPC    &lt SYMBOLS SPACE  &lt MOVEMENT DEL
-
-//        HANDS_DOWN_layer {
 //            display-name = "Handsdown Vibranium V";
 //            bindings = <
 //          &kp N1     &kp N2     &kp N3           &kp N4             &kp N5            /*||*/   &kp N6           &kp N7             &kp N8             &kp N9      &kp N0
-//          &kp H      &hl RALT P &kp M            &kp F              &kp X             /*||*/   &kp DOT          &kp U              &kp O              &hr RALT Y  &kp Q
-//&kp TAB   &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp COMMA        &hr RSHFT A        &hr RCTRL I        &hr LALT R  &hr RGUI C  &kp ENTER
-//&kp CAPS  &kp V      &kp W      &kp G            &kp D              &kp J             /*||*/   &kp FSLH         &kp B              &kp SEMI           &none       &none       &kp ENTER
-//                                &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS E      &lt MOVEMENT DEL
+//          &kp H      &hl RALT P &kp M            &kp G              &kp X             /*||*/   &kp DOT          &kp U              &kp O              &hr RALT Y  &kp B
+//&kp TAB   &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp B            &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C  &kp ENTER
+//&kp CAPS  &kp V      &kp W      &kp F            &kp D              &kp J             /*||*/   &kp FSLH         &kp COMMA          &kp SEMI           &kp Q       &kp Z       &kp ENTER
+//                                &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS R      &lt MOVEMENT DEL
+//                    >;
+//                };
 
-        HANDS_DOWN_layer {
-            display-name = "Handsdown Vibranium V";
+        ENTHIUM_LAYER {
+            display-name = "Enthium";
             bindings = <
           &kp N1     &kp N2     &kp N3           &kp N4             &kp N5            /*||*/   &kp N6           &kp N7             &kp N8             &kp N9      &kp N0
-          &kp H      &hl RALT P &kp M            &kp G              &kp X             /*||*/   &kp DOT          &kp U              &kp O              &hr RALT Y  &kp B
-&kp TAB   &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp B            &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C  &kp ENTER
-&kp CAPS  &kp V      &kp W      &kp F            &kp D              &kp J             /*||*/   &kp FSLH         &kp COMMA          &kp SEMI           &kp Q       &kp Z       &kp ENTER
+          &kp X      &hl RALT P &kp M            &kp G              &kp H             /*||*/   &kp SEMI         &kp U              &kp O              &hr RALT Y  &kp Z
+&kp Q     &hl LGUI L &hl LALT S &hl LCTRL N      &hl LSHIFT T       &kp K             /*||*/   &kp COMMA        &hr RSHFT A        &hr RCTRL E        &hr LALT I  &hr RGUI C  &lt SYMBOLS V
+&none     &kp W      &kp B      &kp F            &kp D              &kp J             /*||*/   &kp FSLH         &kp DOT            &kp EQUAL          &kp FSLH    &kp Z       &kp ENTER
                                 &lt MOVEMENT ESC &lt SYMBOLS SPACE  &lt NUMBERS TAB   /*||*/   &lt NUMBERS BSPC &lt SYMBOLS R      &lt MOVEMENT DEL
                     >;
                 };
