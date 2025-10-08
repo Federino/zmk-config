@@ -296,7 +296,6 @@
     ///////////////////////////////////////////////////////////
         TAP_DANCE(td_parentesis     , 200, LS(N8)      , LS(N9))
         TAP_DANCE(td_brackets       , 200, RA(LBKT)    , RA(RBKT))
-            H
         TAP_DANCE(td_menorque       , 200, NUBS        , LS(NUBS))
         TAP_DANCE(td_exclamaciones  , 200, EQUAL       , LS(N1))
         TAP_DANCE(td_interrogante   , 200, LS(EQUAL)   , LS(MINUS))
