@@ -31,7 +31,7 @@
 #define DEF_TEST_FFF(a) \
         <a>
 
-//´TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
+//TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
 #define COMBO(a, b, c, d, e)                \
         combo_##a {                         \
             timeout-ms            = <b>;    \
@@ -185,6 +185,10 @@
         COMBO(dos_puntos         , 50,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
         COMBO(barra_baja         , 50,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
         COMBO(igual              , 50,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
+        COMBO(apertura_pregunta  , 50,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL))
+        COMBO(apertura_exclama   , 50,    35 36, BASE HANDSDOWN_NEU, &kp EQUAL)
+        COMBO(cierre_pregunta    , 50,    16 17, BASE HANDSDOWN_NEU, &kp LS(MINUS))
+        COMBO(cierre_exclama     , 50,    39 40, BASE HANDSDOWN_NEU, &kp LS(N1))
 
         /////////////////////////////
         // COMBOS QWERTY
