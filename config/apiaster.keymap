@@ -38,7 +38,7 @@
             key-positions         = <c>;   \
             layers                = <d>;   \
             bindings              = <e>;   \
-            require-prior-idle-ms = <300>; \
+            require-prior-idle-ms = <200>; \
         };                                 \
 /* fin macro */
 
@@ -185,7 +185,7 @@
         COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
         COMBO(barra_baja            , COMBO_DEFAULT_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
         COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
-        COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &kp LS(EQUAL))
+        COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL))
         COMBO(apertura_exclama      , COMBO_DEFAULT_TIMEOUT_ms,    36 37, BASE HANDSDOWN_NEU, &kp EQUAL)
         COMBO(cierre_pregunta       , COMBO_DEFAULT_TIMEOUT_ms,    15 16, BASE HANDSDOWN_NEU, &kp LS(MINUS))
         COMBO(cierre_exclama        , COMBO_DEFAULT_TIMEOUT_ms,    38 39, BASE HANDSDOWN_NEU, &kp LS(N1))
