@@ -178,7 +178,7 @@
         compatible = "zmk,combos";
         COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
         COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
-        COMBO(wasd_gaming_toggle    , COMBO_DEFAULT_TIMEOUT_ms,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
+        //COMBO(wasd_gaming_toggle    , COMBO_DEFAULT_TIMEOUT_ms,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
         COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language)
         COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
         COMBO(flecha_prog           , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
