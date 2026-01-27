@@ -176,7 +176,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     combos {
         compatible = "zmk,combos";
-        COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 27 28 29, BASE HANDSDOWN_NEU, &caps_word)
+        COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 39 40 41, BASE HANDSDOWN_NEU, &caps_word)
         COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
         //COMBO(wasd_gaming_toggle    , COMBO_DEFAULT_TIMEOUT_ms,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
         COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language)
@@ -199,9 +199,9 @@
         /////////////////////////////
         COMBO(print_screen              , 50,   8 9, BASE, &kp PRINTSCREEN      )
         COMBO(qwerty_tilde              , 50, 17 18, BASE, &m_tilde  	        )
-        COMBO(qwerty_tilde_2            , 50, 40 41, BASE, &m_tilde  	        )
-        COMBO(qwerty_tilde_invertida    , 50, 28 29, BASE, &m_tilde_invertida   )
-        COMBO(qwerty_acento_circunflejo , 50, 27 29, BASE, &m_acento_circunflejo)
+        //COMBO(qwerty_tilde_2            , 50, 40 41, BASE, &m_tilde  	        )
+        COMBO(qwerty_tilde_invertida    , 50, 40 41, BASE, &m_tilde_invertida   )
+        COMBO(qwerty_acento_circunflejo , 50, 16 17, BASE, &m_acento_circunflejo)
         //COMBO(qwerty_q,      50,    11 12, BASE, &kp Q)
         //COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
         //COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
