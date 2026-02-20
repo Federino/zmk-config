@@ -59,7 +59,10 @@ include:
     artifact-name: apiaster-left-xiao-ble-with-dongle
   - board: seeeduino_xiao_ble
     shield: apiaster_wired rgbled_adapter
-    artifact-name: apiaster-usb-wired-halves
+    artifact-name: apiaster-xiao-ble
+  - board: seeeduino_xiao_ble
+    shield: apiaster_wired rgbled_adapter
+    artifact-name: apiaster-xiao-ble-studio
   - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact-name: xiao-ble-reset
