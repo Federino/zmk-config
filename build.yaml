@@ -35,5 +35,8 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: apiaster-left-xiao-ble-with-dongle
   - board: xiao_ble
+    shield: apiaster_wired rgbled_adapter
+    artifact-name: apiaster-usb-wired-halves
+  - board: xiao_ble
     shield: settings_reset
     artifact-name: xiao-ble-reset
