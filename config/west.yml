@@ -15,8 +15,8 @@ manifest:
       remote: munnich
       revision: main
       import: config/west.yml
-    #- name: zmk-rgbled-widget
-    #  url: https://github.com/caksoylar/zmk-rgbled-widget
-    #  revision: main
+    - name: zmk-rgbled-widget
+      url: https://github.com/caksoylar/zmk-rgbled-widget
+      revision: v0.3.0
   self:
     path: config

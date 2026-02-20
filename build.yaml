@@ -19,24 +19,47 @@
 #
 ---
 include:
-  - board: xiao_ble
+  #- board: xiao_ble
+  #  shield: apiaster_left rgbled_adapter
+  #  snippet: studio-rpc-usb-uart 
+  #  cmake-args: -DCONFIG_ZMK_STUDIO=y
+  #  artifact-name: apiaster-left-xiao-ble-studio
+  #- board: xiao_ble
+  #  shield: apiaster_right rgbled_adapter
+  #  artifact-name: apiaster-right-xiao-ble
+  #- board: xiao_ble
+  #  shield: apiaster_dongle rgbled_adapter
+  #  artifact-name: apiaster-dongle-xiao-ble
+  #- board: xiao_ble
+  #  shield: apiaster_left rgbled_adapter
+  #  cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  #  artifact-name: apiaster-left-xiao-ble-with-dongle
+  #- board: xiao_ble
+  #  shield: apiaster_wired rgbled_adapter
+  #  artifact-name: apiaster-usb-wired-halves
+  #- board: xiao_ble
+  #  shield: settings_reset
+  #  artifact-name: xiao-ble-reset
+
+
+  - board: seeeduino_xiao_ble
     shield: apiaster_left rgbled_adapter
     snippet: studio-rpc-usb-uart 
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: apiaster-left-xiao-ble-studio
-  - board: xiao_ble
+  - board: seeeduino_xiao_ble
     shield: apiaster_right rgbled_adapter
     artifact-name: apiaster-right-xiao-ble
-  - board: xiao_ble
+  - board: seeeduino_xiao_ble
     shield: apiaster_dongle rgbled_adapter
     artifact-name: apiaster-dongle-xiao-ble
-  - board: xiao_ble
+  - board: seeeduino_xiao_ble
     shield: apiaster_left rgbled_adapter
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: apiaster-left-xiao-ble-with-dongle
-  - board: xiao_ble
-    shield: apiaster_wired 
+  - board: seeeduino_xiao_ble
+    shield: apiaster_wired rgbled_adapter
     artifact-name: apiaster-usb-wired-halves
-  - board: xiao_ble
+  - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact-name: xiao-ble-reset
