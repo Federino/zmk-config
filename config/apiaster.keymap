@@ -245,7 +245,7 @@
         td_layer_toggle: hold_tap_layer_toggle {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <5000>;
+            tapping-term-ms = <150>;
             bindings = <&kp Q>, <&tog 3>;
         };
         hl: home_row_hold_tap_left {
