@@ -386,11 +386,11 @@
 // |   \   |   Z   |   X   |    C    |   V    |   B   |              |  N  |   M    |    ,    |   .   |   /   |   '   |
 //                                      | LOWER  | SPACE | ESC |  | DEL |BACK | RAISE  | 
             bindings = <
-                  &kp N1                           &kp N2     &kp N3           &kp N4             &kp N5            /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
-                  &td_layer_toggle &kp W      &kp E            &lt SYMBOLS R      &kp T             /*||*/    &kp Y               &lt SYMBOLS U    &kp I             &kp O           &kp P
-&sl SYMBOLS       &hl LGUI A                       &hl LALT S &hl LCTRL D      &hl LSHFT F        &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &sl SYMBOLS
-&none             &kp Z                            &hl RALT X &kp C            &kp V              &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
-                                                   &kp ESC          &lt MOVEMENT SPACE &lt NUMBERS TAB   /*||*/    &lt NUMBERS ENTER   &kp BSPC         &kp DEL
+                   &kp N1       &kp N2     &kp N3             &kp N4             &kp N5            /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
+                   &kp Q        &kp W      &kp E              &lt SYMBOLS R      &kp T             /*||*/    &kp Y               &lt SYMBOLS U    &kp I             &kp O           &kp P
+&sl SYMBOLS        &hl LGUI A   &hl LALT S &hl LCTRL D        &hl LSHFT F        &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &sl SYMBOLS
+&tog WASD          &kp Z        &hl RALT X &kp C              &kp V              &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
+                                &kp ESC    &lt MOVEMENT SPACE &lt NUMBERS TAB   /*||*/    &lt NUMBERS ENTER   &kp BSPC         &kp DEL
 
                     >;
                 };
@@ -481,12 +481,11 @@
 //                            &none     &none      &none              &none           &kp BACK        &kp DEL
 //            >;
             bindings = <
-              &kp N1     &kp N2      &kp N3           &kp N4            &kp N5                &kp N6            &kp N7           &kp N8          &sys_reset       &soft_off
-              &none      &none       &m_pegar         &m_copiar         &m_cortar             &kp HOME          &kp PAGE_DOWN    &kp PAGE_UP     &kp END          &kp PAGE_UP 
-&tog MOVEMENT &kp LGUI   &kp LALT    &kp LCTRL        &kp LSHFT         &none 		      &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &none         &none
-&kp BSLH      &none      &none       &m_close_window  &m_deshacer       &kp DEL               &none             &none            &none           &none            &none         &kp SQT
-                                     &none            &none             &none                 &kp ENTER         &kp BSPC         &kp DEL
-
+              &none       &none       &none            &none             &none                 &none             &none            &none           &sys_reset       &soft_off
+              &none       &none       &m_pegar         &m_copiar         &m_cortar             &kp HOME          &kp PAGE_DOWN    &kp PAGE_UP     &kp END          &none 
+&tog MOVEMENT &kp LGUI    &kp LALT    &kp LCTRL        &kp LSHFT         &kp DEL 		       &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &none         &none
+&kp BSLH      &m_deshacer &m_cortar   &m_copiar        &m_deshacer       &kp DEL               &none             &none            &none           &none            &none         &none
+                                      &none            &none             &none                 &none             &none            &none
                     >;
         };
 /*         SYMBOLS_layer { */
@@ -563,11 +562,11 @@
 // |       |      |        |         | QWERTY      |  boot  |                | boot  |      |       |      |  POWER   | reset |
 //                                   |             |        |      |  |      |       |      |
             bindings = <
-          &kp N1     &kp N2   &kp N3   &kp N4         &kp N5                            &none  &none  &none  &none  &none 
-          &kp TAB    &kp Q    &kp W    &kp E          &kp R                             &none  &none  &none  &none  &none 
-&kp ENTER &kp LSHFT  &kp A    &kp S    &kp D          &kp F                             &none  &none  &none  &none  &none &none 
-&kp ESC   &kp LCTRL  &kp Z    &kp X    &kp C          &kp V                             &none  &none  &none  &none  &none &none 
-                              &lt NUMBERS LALT &mo EXTRA_WASD &kp SPACE                    &none  &none  &none 
+          &kp N1     &kp N2   &kp N3           &kp N4         &kp N5                            &none       &none  &none  &none  &none 
+          &kp TAB    &kp Q    &kp W            &kp E          &kp R                             &none       &none  &none  &none  &none 
+&kp ENTER &kp LSHFT  &kp A    &kp S            &kp D          &kp F                             &none       &none  &none  &none  &none &none 
+&kp ESC   &kp LCTRL  &kp Z    &kp X            &kp C          &kp V                             &none       &none  &none  &none  &none &none 
+                              &lt NUMBERS LALT &mo EXTRA_WASD &kp SPACE                         &&tog WASD  &none  &none 
             >;
         };
 
