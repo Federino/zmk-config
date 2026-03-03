@@ -481,11 +481,11 @@
 //                            &none     &none      &none              &none           &kp BACK        &kp DEL
 //            >;
             bindings = <
-              &none       &none       &none            &none             &none                 &none             &none            &none           &sys_reset       &soft_off
-              &none       &none       &m_pegar         &m_copiar         &m_cortar             &kp HOME          &kp PAGE_DOWN    &kp PAGE_UP     &kp END          &none 
-&tog MOVEMENT &kp LGUI    &kp LALT    &kp LCTRL        &kp LSHFT         &kp DEL 		       &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &none         &none
-&kp BSLH      &m_deshacer &m_cortar   &m_copiar        &m_deshacer       &kp DEL               &none             &none            &none           &none            &none         &none
-                                      &none            &none             &none                 &none             &none            &none
+              &none       &none       &none      &none      &none                 &none             &none            &none           &sys_reset       &soft_off
+              &none       &none       &m_pegar   &kp DEL    &m_cortar             &kp HOME          &kp PAGE_DOWN    &kp PAGE_UP     &kp END          &none 
+&tog MOVEMENT &kp LGUI    &kp LALT    &kp LCTRL  &kp LSHFT  &kp DEL 		       &kp LEFT_ARROW    &kp DOWN_ARROW   &kp UP_ARROW    &kp RIGHT_ARROW  &none         &none
+&kp BSLH      &m_deshacer &m_cortar   &m_copiar  &kp BSPC   &kp DEL               &none             &none            &none           &none            &none         &none
+                                      &none      &none      &none                 &none             &none            &none
                     >;
         };
 /*         SYMBOLS_layer { */
