@@ -25,9 +25,7 @@
 #define THUMBS_R 47 48 49
 
 
-#define COMBO_DEFAULT_TIMEOUT_ms 150
-#define COMBO_FAST_TIMEOUT_ms 150
-#define COMBO_SLOW_TIMEOUT_ms  50
+
 #define DEF_TEST(a) \
         <a>,
 
@@ -35,13 +33,17 @@
         <a>
 
 //TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
-#define COMBO(a, b, c, d, e)               \
+#define COMBO_DEFAULT_TIMEOUT_ms         30
+#define COMBO_FAST_TIMEOUT_ms           150
+#define COMBO_SLOW_TIMEOUT_ms            50
+#define COMBO_REQUIRE_PRIOR_IDLE_ms     300
+#define COMBO(a, b, c, d, e, f)            \
         combo_##a {                        \
             timeout-ms            = <b>;   \
             key-positions         = <c>;   \
             layers                = <d>;   \
             bindings              = <e>;   \
-            require-prior-idle-ms = <300>; \
+            require-prior-idle-ms = <f>;   \
         };                                 \
 /* fin macro */
 
@@ -188,32 +190,31 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     combos {
         compatible = "zmk,combos";
-        COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 39 40 41, BASE HANDSDOWN_NEU, &caps_word)
-        COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU)
-        //COMBO(wasd_gaming_toggle    , COMBO_DEFAULT_TIMEOUT_ms,    20 32, BASE HANDSDOWN_NEU, &tog WASD)
-        COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language)
-        COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA))
-        COMBO(flecha_prog           , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer)
-        COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT))
-        COMBO(barra_baja            , COMBO_DEFAULT_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH))
-        COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0))
-        COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL))
-        COMBO(apertura_exclama      , COMBO_DEFAULT_TIMEOUT_ms,    36 37, BASE HANDSDOWN_NEU, &kp EQUAL)
-        COMBO(cierre_pregunta       , COMBO_DEFAULT_TIMEOUT_ms,    15 16, BASE HANDSDOWN_NEU, &kp LS(MINUS))
-        COMBO(cierre_exclama        , COMBO_DEFAULT_TIMEOUT_ms,    38 39, BASE HANDSDOWN_NEU, &kp LS(N1))
-        COMBO(copy                  , COMBO_DEFAULT_TIMEOUT_ms,    34 35, BASE HANDSDOWN_NEU, &m_copiar)
-        COMBO(cut                   , COMBO_DEFAULT_TIMEOUT_ms,    33 34, BASE HANDSDOWN_NEU, &m_cortar)
-        COMBO(paste                 , COMBO_DEFAULT_TIMEOUT_ms,    11 12, BASE HANDSDOWN_NEU, &m_pegar )
-        COMBO(contra_barra          , COMBO_DEFAULT_TIMEOUT_ms,    23 24,            SYMBOLS, &kp RA(GRAVE))
+        COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 39 40 41, BASE HANDSDOWN_NEU, &caps_word        , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU, COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language  , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(flecha_prog           , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT)       , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(barra_baja            , COMBO_DEFAULT_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(apertura_exclama      , COMBO_DEFAULT_TIMEOUT_ms,    36 37, BASE HANDSDOWN_NEU, &kp EQUAL         , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(cierre_pregunta       , COMBO_DEFAULT_TIMEOUT_ms,    15 16, BASE HANDSDOWN_NEU, &kp LS(MINUS)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(cierre_exclama        , COMBO_DEFAULT_TIMEOUT_ms,    38 39, BASE HANDSDOWN_NEU, &kp LS(N1)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(copy                  , COMBO_DEFAULT_TIMEOUT_ms,    34 35, BASE HANDSDOWN_NEU, &m_copiar         , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(cut                   , COMBO_DEFAULT_TIMEOUT_ms,    33 34, BASE HANDSDOWN_NEU, &m_cortar         , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(paste                 , COMBO_DEFAULT_TIMEOUT_ms,    11 12, BASE HANDSDOWN_NEU, &m_pegar          , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(contra_barra          , COMBO_DEFAULT_TIMEOUT_ms,    23 24,            SYMBOLS, &kp RA(GRAVE)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
 
         /////////////////////////////
         // COMBOS QWERTY
         /////////////////////////////
-        COMBO(print_screen              , 50,   8 9, BASE, &kp PRINTSCREEN      )
-        COMBO(qwerty_tilde              , 50, 17 18, BASE, &m_tilde  	        )
+        COMBO(print_screen              , COMBO_DEFAULT_TIMEOUT_ms,   8 9, BASE, &kp PRINTSCREEN      , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(qwerty_tilde              , 50, 17 18, BASE, &m_tilde  	        , COMBO_REQUIRE_PRIOR_IDLE_ms)
         //COMBO(qwerty_tilde_2            , 50, 40 41, BASE, &m_tilde  	        )
-        COMBO(qwerty_tilde_invertida    , 50, 40 41, BASE, &m_tilde_invertida   )
-        COMBO(qwerty_acento_circunflejo , 50, 16 17, BASE, &m_acento_circunflejo)
+        COMBO(qwerty_tilde_invertida    , 50, 40 41, BASE, &m_tilde_invertida   , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(qwerty_acento_circunflejo , 50, 16 17, BASE, &m_acento_circunflejo, COMBO_REQUIRE_PRIOR_IDLE_ms)
         //COMBO(qwerty_q,      50,    11 12, BASE, &kp Q)
         //COMBO(qwerty_copiar, 50,    12 13, BASE, &m_copiar)
         //COMBO(qwerty_cortar, 50,    13 14, BASE, &m_cortar)
@@ -222,10 +223,10 @@
         /////////////////////////////
         // COMBOS HANDS DOWN VIBRANIUM
         /////////////////////////////
-        COMBO(handsdown_Q                  , 50, 11 12, HANDSDOWN_NEU     , &kp Z 		 )
-        COMBO(handsdown_B                  , 50, 16 17, HANDSDOWN_NEU     , &kp B 		 )
+        COMBO(handsdown_Q                  , 50, 11 12, HANDSDOWN_NEU     , &kp Z 		 , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(handsdown_B                  , 50, 16 17, HANDSDOWN_NEU     , &kp B 		 , COMBO_REQUIRE_PRIOR_IDLE_ms)
         //COMBO(handsdown_Qu                 , 50, 12 13, HANDSDOWN_NEU     , &qu_hold_tap Q 0     )
-        COMBO(handsdown_Z                  , 50, 11 13, HANDSDOWN_NEU     , &kp Q    	 	 )
+        COMBO(handsdown_Z                  , 50, 11 13, HANDSDOWN_NEU     , &kp Q    	 	 , COMBO_REQUIRE_PRIOR_IDLE_ms)
         //COMBO(handsdown_tilde              , 50, 27 28, BASE HANDSDOWN_NEU, &m_tilde  	         )
         //COMBO(handsdown_tilde_invertida    , 50, 28 29, BASE HANDSDOWN_NEU, &m_tilde_invertida   )
         //COMBO(handsdown_acento_circunflejo , 50, 27 29, BASE HANDSDOWN_NEU, &m_acento_circunflejo)
@@ -233,14 +234,14 @@
         /////////////////////////////
         // COMBOS SYMBOL LAYER
         /////////////////////////////
-        COMBO(symb_asterisco               , 50, 16 17, SYMBOLS            , &kp LS(RIGHT_BRACKET))
+        COMBO(symb_asterisco               , 50, 16 17, SYMBOLS            , &kp LS(RIGHT_BRACKET), COMBO_REQUIRE_PRIOR_IDLE_ms)
 
-        COMBO(symb_contrabarra             , 50, 26 27, SYMBOLS            , &kp RA(GRAVE)        )
-        COMBO(symb_cierre_parentesis       , 50, 27 28, SYMBOLS            , &kp LS(N9)           )
-        COMBO(symb_cierre_corchete         , 50, 28 29, SYMBOLS            , &kp RA(RIGHT_BRACKET))
-        COMBO(symb_cierre_curly_corchete   , 50, 27 29, SYMBOLS            , &kp RA(BACKSLASH)    )
+        COMBO(symb_contrabarra             , 50, 26 27, SYMBOLS            , &kp RA(GRAVE)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(symb_cierre_parentesis       , 50, 27 28, SYMBOLS            , &kp LS(N9)           , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(symb_cierre_corchete         , 50, 28 29, SYMBOLS            , &kp RA(RIGHT_BRACKET), COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(symb_cierre_curly_corchete   , 50, 27 29, SYMBOLS            , &kp RA(BACKSLASH)    , COMBO_REQUIRE_PRIOR_IDLE_ms)
 
-        COMBO(symb_comillas_dobles         , 50, 39 40, SYMBOLS            , &kp LS(N2)           )
+        COMBO(symb_comillas_dobles         , 50, 39 40, SYMBOLS            , &kp LS(N2)           , COMBO_REQUIRE_PRIOR_IDLE_ms)
 
 
 
@@ -399,7 +400,7 @@
             bindings = <
                    &kp N1       &kp N2     &kp N3             &kp N4             &kp N5            /*||*/    &kp N6              &kp N7           &kp N8            &kp N9          &kp N0
                    &kp Q        &kp W      &kp E              &lt SYMBOLS R      &kp T             /*||*/    &kp Y               &lt SYMBOLS U    &kp I             &kp O           &kp P
-&sl SYMBOLS        &hl LGUI A   &hl LALT S &hl LCTRL D        &hl LSHFT F        &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &hr RGUI SEMI &sl SYMBOLS
+&kp LGUI           &kp A        &hl LALT S &hl LCTRL D        &hl LSHFT F        &kp G             /*||*/    &kp H               &hr RSHFT J      &hr LCTRL K       &hr LALT L      &kp SEMI      &kp LGUI
 &tog WASD          &kp Z        &hl RALT X &kp C              &kp V              &kp B             /*||*/    &mt_que SEMI N      &kp M            &hr RCTRL COMMA   &hr RALT DOT    &kp FSLH      &kp SQT
                                 &kp ESC    &lt MOVEMENT SPACE &lt NUMBERS TAB   /*||*/    &lt NUMBERS ENTER   &kp BSPC         &kp DEL
 
