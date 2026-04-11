@@ -25,6 +25,7 @@
 #define THUMBS_R 47 48 49
 
 
+#define COMBO_DEFAULT_TIMEOUT_ms 150
 #define COMBO_FAST_TIMEOUT_ms 150
 #define COMBO_SLOW_TIMEOUT_ms  50
 #define DEF_TEST(a) \
