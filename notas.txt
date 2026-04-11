@@ -1,0 +1,20 @@
+11/04/2026
+
+Hace poquito salió una nueva versión de ZMK (4.1) que se ve que cambia como se buildean algunas 
+cositas, pero esto rompe la forma en la que buildeamos el software del teclado. No investigué mucho,
+pero tiene que ver con el nombre del chip y cómo se llama ahora, rollo son subplacas y nosequé.
+
+Por eso, ahora mismo lo he capado a que se utilice la versión 0.3 que sí que funciona y que mantiene
+la nomenclatura antigua.
+
+Para asgurarse de que esto se mantiene, se modifican los siguientes archivos:
+    - .github/workflows/build.yml
+    - config/west.yml
+
+Hay que asegurarse de que tenemos el mismo número de versión en ambos documentos para que funcione.
+Si mañana queremos utilizar versiones más actualizadas, solo tenemos que cambiar ese número. Si lo 
+que queremos es utilizar la versión más actualizada, tenemos que escribir main en lugar de utilizar
+un número de versión.
+
+IMPORTANTE: el plugin que hace que se vean colores en el chip cuando cambiamos de capa, tiene que
+tener la misma versión que la de ZMK que pongamos.
