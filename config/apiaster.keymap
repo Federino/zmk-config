@@ -33,7 +33,8 @@
         <a>
 
 //TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
-#define COMBO_DEFAULT_TIMEOUT_ms         30
+//#define COMBO_DEFAULT_TIMEOUT_ms         30
+#define COMBO_DEFAULT_TIMEOUT_ms        150
 #define COMBO_FAST_TIMEOUT_ms           150
 #define COMBO_SLOW_TIMEOUT_ms            50
 #define COMBO_REQUIRE_PRIOR_IDLE_ms     300
