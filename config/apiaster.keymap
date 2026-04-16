@@ -195,7 +195,7 @@
         COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU, COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language  , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(flecha_prog           ,                       50,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , 0)
+        COMBO(flecha_prog           ,                       50,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , 200)
         COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT)       , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(barra_baja            , COMBO_DEFAULT_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
