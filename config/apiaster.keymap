@@ -265,7 +265,7 @@
         hl: home_row_hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <250>;
@@ -277,7 +277,7 @@
         hr: home_row_hold_tap_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <250>;
@@ -289,7 +289,7 @@
         lt: layer_tap {
             compatible      = "zmk,behavior-hold-tap";
             #binding-cells  = <2>;
-            flavor          = "tap-preferred";
+            flavor          = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms    = <175>;       // Hace que si hacemos un dos taps y dejamos pulsado, se utilice la tecla normal y no el cambio de capa
             bindings        = <&mo>, <&kp>;
