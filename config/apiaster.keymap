@@ -35,9 +35,9 @@
 //TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
 //#define COMBO_DEFAULT_TIMEOUT_ms         30
 #define COMBO_DEFAULT_TIMEOUT_ms              30
-#define COMBO_FAST_TIMEOUT_ms                100
+#define COMBO_FAST_TIMEOUT_ms                100 	/* Tenemos 100ms para pulsar las teclas del combo */
 #define COMBO_SLOW_TIMEOUT_ms                 50
-#define COMBO_REQUIRE_PRIOR_IDLE_ms          200
+#define COMBO_REQUIRE_PRIOR_IDLE_ms          200 	/* Han de pasar 200ms desde la ultima tecla para registrar el combo */
 #define COMBO_FAST_REQUIRE_PRIOR_IDLE_ms     100
 #define COMBO_SLOW_REQUIRE_PRIOR_IDLE_ms     300
 #define COMBO(a, b, c, d, e, f)            \
@@ -196,11 +196,11 @@
         COMBO(caps_words            , COMBO_DEFAULT_TIMEOUT_ms, 39 40 41, BASE HANDSDOWN_NEU, &caps_word        , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(hands_down_as_base    , COMBO_DEFAULT_TIMEOUT_ms,    12 40, BASE HANDSDOWN_NEU, &tog HANDSDOWN_NEU, COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(change_language       , COMBO_DEFAULT_TIMEOUT_ms,      0 9, BASE HANDSDOWN_NEU, &change_language  , COMBO_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(flecha_prog           , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , 200)
-        COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT)       , COMBO_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(barra_baja            , COMBO_FAST_TIMEOUT_ms   ,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_FAST_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(punto_coma            , COMBO_FAST_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(flecha_prog           , COMBO_FAST_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , 200)
+        COMBO(dos_puntos            , COMBO_FAST_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT)       , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(barra_baja            , COMBO_FAST_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_FAST_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(igual                 , COMBO_FAST_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(apertura_exclama      , COMBO_DEFAULT_TIMEOUT_ms,    36 37, BASE HANDSDOWN_NEU, &kp EQUAL         , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(cierre_pregunta       , COMBO_DEFAULT_TIMEOUT_ms,    15 16, BASE HANDSDOWN_NEU, &kp LS(MINUS)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
