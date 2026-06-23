@@ -34,10 +34,12 @@
 
 //TODO hacer que todos los macros, combos, etc sean macros de C. Queda mas limpio y facil de leer
 //#define COMBO_DEFAULT_TIMEOUT_ms         30
-#define COMBO_DEFAULT_TIMEOUT_ms         30
-#define COMBO_FAST_TIMEOUT_ms           150
-#define COMBO_SLOW_TIMEOUT_ms            50
-#define COMBO_REQUIRE_PRIOR_IDLE_ms     200
+#define COMBO_DEFAULT_TIMEOUT_ms              30
+#define COMBO_FAST_TIMEOUT_ms                100
+#define COMBO_SLOW_TIMEOUT_ms                 50
+#define COMBO_REQUIRE_PRIOR_IDLE_ms          200
+#define COMBO_FAST_REQUIRE_PRIOR_IDLE_ms     100
+#define COMBO_SLOW_REQUIRE_PRIOR_IDLE_ms     300
 #define COMBO(a, b, c, d, e, f)            \
         combo_##a {                        \
             timeout-ms            = <b>;   \
@@ -197,7 +199,7 @@
         COMBO(punto_coma            , COMBO_DEFAULT_TIMEOUT_ms,    23 28, BASE HANDSDOWN_NEU, &kp LS(COMMA)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(flecha_prog           , COMBO_DEFAULT_TIMEOUT_ms,    14 15, BASE HANDSDOWN_NEU, &flecha_pointer   , 200)
         COMBO(dos_puntos            , COMBO_DEFAULT_TIMEOUT_ms,    24 27, BASE HANDSDOWN_NEU, &kp LS(DOT)       , COMBO_REQUIRE_PRIOR_IDLE_ms)
-        COMBO(barra_baja            , COMBO_DEFAULT_TIMEOUT_ms,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_REQUIRE_PRIOR_IDLE_ms)
+        COMBO(barra_baja            , COMBO_FAST_TIMEOUT_ms   ,    36 39, BASE HANDSDOWN_NEU, &kp LS(FSLH)      , COMBO_FAST_REQUIRE_PRIOR_IDLE_ms)
         COMBO(igual                 , COMBO_DEFAULT_TIMEOUT_ms,    25 26, BASE HANDSDOWN_NEU, &kp LS(N0)        , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(apertura_pregunta     , COMBO_DEFAULT_TIMEOUT_ms,    13 14, BASE HANDSDOWN_NEU, &kp LS(EQUAL)     , COMBO_REQUIRE_PRIOR_IDLE_ms)
         COMBO(apertura_exclama      , COMBO_DEFAULT_TIMEOUT_ms,    36 37, BASE HANDSDOWN_NEU, &kp EQUAL         , COMBO_REQUIRE_PRIOR_IDLE_ms)
